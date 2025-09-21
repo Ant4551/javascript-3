@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Teoria JavaScript - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close()
+        }
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { font-size: 2cm; } /* 2cm wielkość czcionki */
+        .odpowiedz { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <h1>Szkielet zaliczeniowy JavaScript, wykonał: Antoni Kapral klasa 2W</h1>
+
+    <div class="odpowiedz">
+        <b>1) Kiedy powstał JavaScript (podaj datę).</b><br>
+        ...... JavaScript został stworzony przez Brendan'a Eich'a w wrześniu 1995 roku w ciągu około 10 dni. Pierwsza wersja była integralną częścią przeglądarki Netscape Navigator 2.0 ......
+    </div>
+
+    <div class="odpowiedz">
+        <b>2) Dlaczego jest to język skryptowy?</b><br>
+        ...... Ponieważ jego kod jest wykonywany przez interpreter (np. przeglądarkę) w locie, bez potrzeby uprzedniej kompilacji do kodu maszynowego. Skrypty są osadzone bezpośrednio w stronach HTML i uruchamiane po ich załadowaniu ......
+    </div>
+
+    <div class="odpowiedz">
+        <b>3) Gdzie jest wykonywany JS (klient lub serwer)?</b><br>
+        ...... JavaScript jest wykonywany po stronie klienta (w przeglądarce użytkownika). Istnieje także środowisko Node.js, które pozwala wykonywać JavaScript po stronie serwera ......
+    </div>
+
+    <div class="odpowiedz">
+        <b>4) Dlaczego JS jest bezpiecznym narzędziem?</b><br>
+        ...... Głównie dzięki tzw. "piaskownicy" (sandbox). JavaScript uruchomiony w przeglądarce ma bardzo ograniczony dostęp do systemu operacyjnego użytkownika. Nie może np. samodzielnie odczytywać lub zapisywać plików na dysku bez wyraźnej zgody użytkownika (np. poprzez przeciągnięcie pliku do okna przeglądarki) ......
+    </div>
+
+    <div class="odpowiedz">
+        <b>5) Czy jest to język obiektowy, jeśli tak to dlaczego?</b><br>
+        ...... Tak, JavaScript jest językiem obiektowym. Opiera się na prototypach, a nie na klasach (choć od ES6 wprowadzono słowa kluczowe class, które są "syntaktycznym cukrem" nad istniejącym modelem prototypowym). Niemal wszystko w JavaScripcie jest obiektem, a właściwości i metody są dodawane i dziedziczone poprzez łańcuch prototypów ......
+    </div>
+
+    <div class="odpowiedz">
+        <b>6) Wymień zalety JS:</b><br>
+        Zaleta1......Wszechstronność: można pisać front-end (przeglądarka), back-end (Node.js), a nawet aplikacje mobilne (React Native, Ionic)......<br>
+        Zaleta2......Asynchroniczność i nieblokujący charakter: idealny do operacji I/O, które nie blokują wątku głównego......<br>
+        Zaleta3......Ogromna społeczność i ekosystem: npm to największy na świecie rejestr bibliotek open source......
+    </div>
+
+    <div class="odpowiedz">
+        <b>7) Framework to:</b><br>
+        ......Struktura oprogramowania, która dostarcza gotowy szkielet do budowy aplikacji. Definiuje ogólną architekturę, dostarcza zestaw narzędzi i bibliotek oraz narzuca pewne konwencje pisania kodu, co przyspiesza rozwój i ułatwia utrzymanie dużych projektów (np. React, Angular, Vue)......
+    </div>
+
+    <div class="odpowiedz">
+        <b>8) Do aplikacji mobilnych można użyć Framework:</b><br>
+        ......React Native, NativeScript, Ionic, Apache Cordova/PhoneGap. Pozwalają one tworzyć aplikacje na platformy iOS i Android używając technologii webowych (JavaScript, HTML, CSS)......
+    </div>
+
+    <div class="odpowiedz">
+        <b>9) Aplikacje responsywne to:</b><br>
+        ......Aplikacje (lub strony internetowe), których layout i interfejs użytkownika dynamicznie dostosowują się do rozmiaru i orientacji ekranu urządzenia, na którym są wyświetlane (komputer, tablet, smartphone), zapewniając optymalne doświadczenie niezależnie od urządzenia......
+    </div>
+
+    <div class="odpowiedz">
+        <b>10) Przepisz linie kodu pod nimi wytłumaczenie jak działa ten fragment kodu</b><br>
+        <code>&lt;input type="button" name="przycisk" value="Nowa Strona" onclick="WinOpen()"&gt;</code><br>
+        ......Wytłumaczenie: Ten kod HTML tworzy przycisk na stronie. Atrybut <code>onclick</code> jest nasłuchiwaczem zdarzeń (event listener). Kiedy użytkownik kliknie ("click") ten przycisk, wywołana zostanie funkcja JavaScript o nazwie <code>WinOpen()</code>......
+    </div>
+
+    <div class="odpowiedz">
+        <b>11) Przepisz linie kodu pod nimi wytłumaczenie jak działa ten fragment kodu</b><br>
+        <code>window.open("obraz.html", "okienko", "toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");</code><br>
+        ......Wytłumaczenie: Instrukcja <code>window.open()</code> otwiera nowe okno przeglądarki. Pierwszy argument to adres URL do załadowania ("obraz.html"). Drugi to nazwa okna/target ("okienko"). Trzeci argument to ciąg znaków definiujący właściwości nowego okna:<br>
+        > <code>toolbar=no</code> - ukrywa pasek narzędzi przeglądarki (przyciski wstecz, przód, odśwież)<br>
+        > <code>directories=no</code> - ukrywa przyciski katalogów (starsze przeglądarki)<br>
+        > <code>menubar=no</code> - ukrywa główny pasek menu (Plik, Edycja, Widok, itd.)<br>
+        > <code>height=280,width=160</code> - ustawia wysokość i szerokość okna na 280 i 160 pikseli<br>
+        > <code>top=200,left=200</code> - ustawia pozycję okna: 200 pikseli od górnej i 200 od lewej krawędzi ekranu......
+    </div>
+
+    <div class="odpowiedz">
+        <b>12) Opisz następującą instrukcję window.close()</b><br>
+        ......Instrukcja <code>window.close()</code> zamyka bieżące okno przeglądarki. Jeśli okno zostało otwarte przez skrypt (a nie bezpośrednio przez użytkownika), większość przeglądarek pozwoli je zamknąć tą metodą. Próba zamknięcia okna głównego, które nie zostało otwarte przez skrypt, często wymaga potwierdzenia od użytkownika lub jest blokowana......
+    </div>
+
+    <br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+
+</body>
+</html>

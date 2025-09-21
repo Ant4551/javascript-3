@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Galeria - Kapral</title>
+    <script language="JavaScript">
+        // Funkcje do otwierania okien z obrazkami dla Układu 2
+        function WinOpen_kapral_1() {
+            window.open("grafika1.html", "okienko_graf1", "width=320,height=300,top=50,left=50");
+        }
+        function WinOpen_kapral_2() {
+            window.open("grafika2.html", "okienko_graf2", "width=320,height=300,top=50,left=400");
+        }
+        function WinOpen_kapral_3() {
+            window.open("grafika3.html", "okienko_graf3", "width=320,height=300,top=400,left=50");
+        }
+        function WinOpen_kapral_4() {
+            window.open("grafika4.html", "okienko_graf4", "width=320,height=300,top=400,left=400");
+        }
+        function okno_zamknij_galeria() {
+            window.close();
+        }
+    </script>
+    <style>
+        body { text-align: center; font-family: Arial; }
+        .przyciski { margin: 20px; }
+        input[type="button"] { margin: 10px; padding: 15px; }
+    </style>
+</head>
+<body>
+    <h2>wykonał: Antoni Kapral mój numer w dzienniku 10, czyli mam układ [(10) mod 4=2] układ 2</h2>
+
+    <div class="przyciski">
+        <input type="button" value="grafika1" onclick="WinOpen_kapral_1()"/>
+        <input type="button" value="grafika2" onclick="WinOpen_kapral_2()"/>
+        <input type="button" value="grafika3" onclick="WinOpen_kapral_3()"/>
+        <input type="button" value="grafika4" onclick="WinOpen_kapral_4()"/>
+    </div>
+    <br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_galeria()"/>
+
+</body>
+</html>
