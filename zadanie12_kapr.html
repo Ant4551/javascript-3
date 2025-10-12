@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 12 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 2W
+        // Zadanie 12
+        var D1_kap = prompt("Dzień 1 (1-31)=", "");
+        var G1_kap = prompt("Godzina 1 (0-23)=", "");
+        var D2_kap = prompt("Dzień 2 (1-31)=", "");
+        var G2_kap = prompt("Godzina 2 (0-23)=", "");
+        
+        var a_dzien = parseFloat(D1_kap);
+        var a_godzina = parseFloat(G1_kap);
+        var b_dzien = parseFloat(D2_kap);
+        var b_godzina = parseFloat(G2_kap);
+        
+        var total_hours_a = (a_dzien - 1) * 24 + a_godzina;
+        var total_hours_b = (b_dzien - 1) * 24 + b_godzina;
+        
+        var sekund = (total_hours_a - total_hours_b) * 60 * 60;
+        
+        document.write("Ilość sekund między: " + D1_kap + " dzień, " + G1_kap + " godzina<br>");
+        document.write("a: " + D2_kap + " dzień, " + G2_kap + " godzina<br>");
+        document.write("= " + sekund + " sekund<br>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

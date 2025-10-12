@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 13 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 2W
+        // Zadanie 13
+        var m_kap = prompt("Podaj m (mianownik ułamka)=", "");
+        var m = parseFloat(m_kap);
+        
+        var ulamek1 = 1 / (m + 1);
+        var ulamek2 = 1 / (m * (m + 1));
+        
+        document.write("1/" + m + " = 1/" + (m + 1) + " + 1/" + (m * (m + 1)) + "<br>");
+        document.write("Sprawdzenie:<br>");
+        document.write("1/" + (m + 1) + " = " + ulamek1.toFixed(4) + "<br>");
+        document.write("1/" + (m * (m + 1)) + " = " + ulamek2.toFixed(4) + "<br>");
+        document.write("Suma: " + (ulamek1 + ulamek2).toFixed(4) + "<br>");
+        document.write("1/" + m + " = " + (1/m).toFixed(4));
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 11 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 2W
+        // Zadanie 11
+        var D1_kap = prompt("Data1=", "");
+        var D2_kap = prompt("Data2=", "");
+        var sekund;
+        var a = parseFloat(D1_kap);
+        var b = parseFloat(D2_kap);
+        sekund = (a - b) * 24 * 60 * 60;
+        document.write("Ilość sekund między dniami " + a + " i " + b + " = " + sekund + "<br>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

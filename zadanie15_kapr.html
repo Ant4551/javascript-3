@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 15 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 2W
+        // Zadanie 15
+        var m_kap = prompt("Podaj m (mianownik ułamka)=", "");
+        var m = parseFloat(m_kap);
+        
+        var identyczny_mianownik = 2 * m;
+        var ulamek = 1 / identyczny_mianownik;
+        
+        document.write("Rozkład ułamka 1/" + m + " na dwa identyczne ułamki egipskie:<br><br>");
+        document.write("1/" + m + " = 1/" + identyczny_mianownik + " + 1/" + identyczny_mianownik + "<br><br>");
+        document.write("Sprawdzenie:<br>");
+        document.write("1/" + identyczny_mianownik + " = " + ulamek.toFixed(6) + "<br>");
+        document.write("Suma dwóch identycznych ułamków: " + (ulamek + ulamek).toFixed(6) + "<br>");
+        document.write("1/" + m + " = " + (1/m).toFixed(6));
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 14 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 2W
+        // Zadanie 14
+        var m_kap = prompt("Podaj m (mianownik ułamka)=", "");
+        var m = parseFloat(m_kap);
+        
+        var ulamek1 = 1 / (m + 2);
+        var ulamek2 = 1 / ((m + 1) * (m + 2));
+        var ulamek3 = 1 / (m * (m + 1));
+        
+        document.write("Rozkład ułamka 1/" + m + " na trzy ułamki egipskie:<br><br>");
+        document.write("1/" + m + " = 1/" + (m + 2) + " + 1/" + ((m + 1) * (m + 2)) + " + 1/" + (m * (m + 1)) + "<br><br>");
+        document.write("Sprawdzenie:<br>");
+        document.write("1/" + (m + 2) + " = " + ulamek1.toFixed(6) + "<br>");
+        document.write("1/" + ((m + 1) * (m + 2)) + " = " + ulamek2.toFixed(6) + "<br>");
+        document.write("1/" + (m * (m + 1)) + " = " + ulamek3.toFixed(6) + "<br>");
+        document.write("Suma: " + (ulamek1 + ulamek2 + ulamek3).toFixed(6) + "<br>");
+        document.write("1/" + m + " = " + (1/m).toFixed(6));
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>
