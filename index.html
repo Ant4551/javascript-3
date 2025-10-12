@@ -2,8 +2,9 @@
 <html lang="pl-PL">
 <head>
     <meta charset="utf-8">
-    <title>Zaliczenie JavaScript - Kapral</title>
+    <title>Zadanie 5 - Kapral</title>
     <script language="JavaScript">
+        // Functions for Tasks 1-5
         function WinOpen_zad1() {
             window.open("zadanie1_kapr.html", "okienko_zad1", "width=400,height=150,top=100,left=100");
         }
@@ -16,31 +17,107 @@
         function WinOpen_zad4() {
             window.open("zadanie4_kapr.html", "okienko_zad4", "width=800,height=600,top=300,left=100");
         }
-        function WinOpen_zad5() {
+        function WinOpen_zad5_galeria() {
             window.open("zadanie5_galeria.html", "okienko_zad5", "width=700,height=500,top=300,left=550");
         }
-        function okno_zamknij_glowne() {
+
+        // Functions for Tasks 6-15
+        function WinOpen_zad6() {
+            window.open("zadanie6_kapr.html", "okienko_zad6", "width=700,height=500,top=50,left=50");
+        }
+        function WinOpen_zad7() {
+            window.open("zadanie7_kapr.html", "okienko_zad7", "width=500,height=300,top=100,left=100");
+        }
+        function WinOpen_zad8() {
+            window.open("zadanie8_kapr.html", "okienko_zad8", "width=500,height=300,top=150,left=150");
+        }
+        function WinOpen_zad9() {
+            window.open("zadanie9_kapr.html", "okienko_zad9", "width=500,height=300,top=200,left=200");
+        }
+        function WinOpen_zad10() {
+            window.open("zadanie10_kapr.html", "okienko_zad10", "width=600,height=400,top=100,left=100");
+        }
+        function WinOpen_zad11() {
+            window.open("zadanie11_kapr.html", "okienko_zad11", "width=600,height=400,top=120,left=120");
+        }
+        function WinOpen_zad11_kod() {
+            window.open("zadanie11_kapr_KOD.html", "okienko_zad11_kod", "width=800,height=600,top=140,left=140");
+        }
+        function WinOpen_zad12() {
+            window.open("zadanie12_kapr.html", "okienko_zad12", "width=600,height=400,top=160,left=160");
+        }
+        function WinOpen_zad12_kod() {
+            window.open("zadanie12_kapr_KOD.html", "okienko_zad12_kod", "width=800,height=600,top=180,left=180");
+        }
+        function WinOpen_zad13() {
+            window.open("zadanie13_kapr.html", "okienko_zad13", "width=600,height=400,top=200,left=200");
+        }
+        function WinOpen_zad13_kod() {
+            window.open("zadanie13_kapr_KOD.html", "okienko_zad13_kod", "width=800,height=600,top=220,left=220");
+        }
+        function WinOpen_zad14() {
+            window.open("zadanie14_kapr.html", "okienko_zad14", "width=600,height=400,top=240,left=240");
+        }
+        function WinOpen_zad14_kod() {
+            window.open("zadanie14_kapr_KOD.html", "okienko_zad14_kod", "width=800,height=600,top=260,left=260");
+        }
+        function WinOpen_zad15() {
+            window.open("zadanie15_kapr.html", "okienko_zad15", "width=600,height=400,top=280,left=280");
+        }
+        function WinOpen_zad15_kod() {
+            window.open("zadanie15_kapr_KOD.html", "okienko_zad15_kod", "width=800,height=600,top=300,left=300");
+        }
+
+        function okno_zamknij_kapral() {
             window.close();
         }
     </script>
     <style>
-        h1 { font-size: 2cm; text-align: center; }
-        .przyciski { text-align: center; margin: 20px; }
-        input[type="button"] { margin: 5px; padding: 10px; }
+        body { text-align: center; font-family: Arial; padding: 20px; }
+        input[type="button"] { margin: 5px; padding: 10px; font-size: 14px; }
+        .task-row { margin: 10px 0; }
+        h2 { color: #333; }
     </style>
 </head>
 <body>
+    <h2>Zadanie 1/15 - Szkielet zaliczeniowy<br>Antoni Kapral klasa 3F</h2>
 
-    <h1>Szkielet zaliczeniowy JavaScript, wykonał: Antoni Kapral klasa 2W</h1>
-
-    <div class="przyciski">
-        <input type="button" name="zadanie1" value="zadanie1-Kapral" onclick="WinOpen_zad1()"/>
-        <input type="button" name="zadanie2" value="zadanie2-Kapral" onclick="WinOpen_zad2()"/>
-        <input type="button" name="zadanie3" value="zadanie3-Kapral" onclick="WinOpen_zad3()"/>
-        <input type="button" name="zadanie4" value="zadanie4-Kapral" onclick="WinOpen_zad4()"/>
-        <input type="button" name="zadanie5" value="zadanie5-Kapral" onclick="WinOpen_zad5()"/>
-        <input type="button" value="zamknij okno" onclick="okno_zamknij_glowne()"/>
+    <div class="task-row">
+        <input type="button" value="zadanie1-Kapral" onclick="WinOpen_zad1()"/>
+        <input type="button" value="zadanie2-Kapral" onclick="WinOpen_zad2()"/>
+        <input type="button" value="zadanie3-Kapral" onclick="WinOpen_zad3()"/>
+        <input type="button" value="zadanie4-Kapral" onclick="WinOpen_zad4()"/>
+        <input type="button" value="zadanie5-Kapral" onclick="WinOpen_zad5_galeria()"/>
+    </div>
+    
+    <div class="task-row">
+        <input type="button" value="zadanie6-Kapral" onclick="WinOpen_zad6()"/>
+        <input type="button" value="zadanie7-Kapral" onclick="WinOpen_zad7()"/>
+        <input type="button" value="zadanie8-Kapral" onclick="WinOpen_zad8()"/>
+        <input type="button" value="zadanie9-Kapral" onclick="WinOpen_zad9()"/>
+        <input type="button" value="zadanie10-Kapral" onclick="WinOpen_zad10()"/>
+    </div>
+    
+    <div class="task-row">
+        <input type="button" value="zadanie11-Kapral" onclick="WinOpen_zad11()"/>
+        <input type="button" value="zadanie11-Kapral-KOD" onclick="WinOpen_zad11_kod()"/>
+        <input type="button" value="zadanie12-Kapral" onclick="WinOpen_zad12()"/>
+        <input type="button" value="zadanie12-Kapral-KOD" onclick="WinOpen_zad12_kod()"/>
+    </div>
+    
+    <div class="task-row">
+        <input type="button" value="zadanie13-Kapral" onclick="WinOpen_zad13()"/>
+        <input type="button" value="zadanie13-Kapral-KOD" onclick="WinOpen_zad13_kod()"/>
+        <input type="button" value="zadanie14-Kapral" onclick="WinOpen_zad14()"/>
+        <input type="button" value="zadanie14-Kapral-KOD" onclick="WinOpen_zad14_kod()"/>
+    </div>
+    
+    <div class="task-row">
+        <input type="button" value="zadanie15-Kapral" onclick="WinOpen_zad15()"/>
+        <input type="button" value="zadanie15-Kapral-KOD" onclick="WinOpen_zad15_kod()"/>
     </div>
 
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
 </body>
 </html>
