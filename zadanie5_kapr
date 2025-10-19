@@ -1,0 +1,45 @@
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Zaliczenie JavaScript - Kapral</title>
+    <script language="JavaScript">
+        function WinOpen_zad1() {
+            window.open("zadanie1_kapr.html", "okienko_zad1", "width=400,height=150,top=100,left=100");
+        }
+        function WinOpen_zad2() {
+            window.open("zadanie2_kapr.html", "okienko_zad2", "width=400,height=150,top=100,left=550");
+        }
+        function WinOpen_zad3() {
+            window.open("zadanie3_kapr.html", "okienko_zad3", "width=300,height=100,top=100,left=1000");
+        }
+        function WinOpen_zad4() {
+            window.open("zadanie4_kapr.html", "okienko_zad4", "width=800,height=600,top=300,left=100");
+        }
+        function WinOpen_zad5() {
+            window.open("zadanie5_galeria.html", "okienko_zad5", "width=700,height=500,top=300,left=550");
+        }
+        function okno_zamknij_glowne() {
+            window.close();
+        }
+    </script>
+    <style>
+        h1 { font-size: 2cm; text-align: center; }
+        .przyciski { text-align: center; margin: 20px; }
+        input[type="button"] { margin: 5px; padding: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Szkielet zaliczeniowy JavaScript, wykonał: Antoni Kapral klasa 2W</h1>
+
+    <div class="przyciski">
+        <input type="button" name="zadanie1" value="zadanie1-Kapral" onclick="WinOpen_zad1()"/>
+        <input type="button" name="zadanie2" value="zadanie2-Kapral" onclick="WinOpen_zad2()"/>
+        <input type="button" name="zadanie3" value="zadanie3-Kapral" onclick="WinOpen_zad3()"/>
+        <input type="button" name="zadanie4" value="zadanie4-Kapral" onclick="WinOpen_zad4()"/>
+        <input type="button" name="zadanie5" value="zadanie5-Kapral" onclick="WinOpen_zad5()"/>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_glowne()"/>
+    </div>
+
+</body>
+</html>
