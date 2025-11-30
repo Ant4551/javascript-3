@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 19 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+       
+        
+        function Pole_kapral() {
+            var a_kap = parseFloat(document.getElementById('a_dana_kap').value);
+            var pole = a_kap * a_kap;
+            document.getElementById("wynik_pole_kap").innerHTML = "Pole kwadratu = " + pole.toFixed(2);
+        }
+        
+        function obwod_kapral() {
+            var a_kap = parseFloat(document.getElementById('a_dana_kap').value);
+            var obwod = 4 * a_kap;
+            document.getElementById("wynik_obwod_kap").innerHTML = "Obwód kwadratu = " + obwod.toFixed(2);
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Obliczanie pola i obwodu kwadratu</h2>
+    Podaj długość boku: <input type="text" id="a_dana_kap" value=""><br><br>
+    <input type="button" value="Oblicz pole" onclick="Pole_kapral()">
+    <input type="button" value="Oblicz obwód" onclick="obwod_kapral()"><br><br>
+    <div id="wynik_pole_kap" style="color:blue; font-size:16px;"></div>
+    <div id="wynik_obwod_kap" style="color:green; font-size:16px;"></div><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 22 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 22</h2>
+    <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 22 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+
+        
+        function Pole_kapral(a_kap, b_kap) {
+            var pole = a_kap * b_kap;
+            document.getElementById("wyprowadz_pole_kap").value = pole.toFixed(2);
+            return pole;
+        }
+        
+        function obwod_kapral(a_kap, b_kap) {
+            var obwod = 2 * (a_kap + b_kap);
+            document.getElementById("wyprowadz_obwod_kap").value = obwod.toFixed(2);
+            return obwod;
+        }
+        
+        function oblicz_kap() {
+            var a_kap = parseFloat(document.getElementById('a_dana_kap').value);
+            var b_kap = parseFloat(document.getElementById('b_dana_kap').value);
+            Pole_kapral(a_kap, b_kap);
+            obwod_kapral(a_kap, b_kap);
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Obliczanie pola i obwodu prostokąta</h2>
+    Podaj bok a: <input type="text" id="a_dana_kap"><br>
+    Podaj bok b: <input type="text" id="b_dana_kap"><br><br>
+    <input type="button" value="Oblicz" onclick="oblicz_kap()"><br><br>
+    Pole: <input type="text" id="wyprowadz_pole_kap" readonly><br>
+    Obwód: <input type="text" id="wyprowadz_obwod_kap" readonly><br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

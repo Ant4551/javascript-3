@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 21 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 21</h2>
+    <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 21 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+
+        
+        function V_kap(r, h) {
+            r_liczba = parseFloat(r);
+            h_liczba = parseFloat(h);
+            V_wynik = Math.PI * r_liczba * r_liczba * h_liczba;
+            document.formular.obj_kap.value = V_wynik.toFixed(2);
+            alert("V = " + V_wynik.toFixed(2) + " cm³");
+            pokaz1_kap.innerHTML = "V = " + V_wynik.toFixed(2) + " cm³<br>";
+        }
+        
+        function Pc_kap(r, h) {
+            r_liczba = parseFloat(r);
+            h_liczba = parseFloat(h);
+            Pc_wynik = 2 * Math.PI * r_liczba * r_liczba + 2 * Math.PI * r_liczba * h_liczba;
+            document.formular.pole_kap.value = Pc_wynik.toFixed(2);
+            alert("Pc = " + Pc_wynik.toFixed(2) + " cm²");
+            pokaz2_kap.innerHTML = "Pc = " + Pc_wynik.toFixed(2) + " cm²";
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Obliczanie V i Pc walca</h2><br>
+    <form name="formular" action="..." onsubmit="V_kap(this.promien_kap.value,this.wysokosc_kap.value); Pc_kap(this.promien_kap.value,this.wysokosc_kap.value); return false">
+        Podaj r = <input size="6" name="promien_kap">
+        Podaj h = <input size="6" name="wysokosc_kap">
+        <br><br>
+        <input TYPE="submit" Value="oblicz">
+        <br><br>
+        V = <input size="6" name="obj_kap">
+        Pc = <input size="6" name="pole_kap">
+    </form>
+    <table>
+        <tr id="pokaz1_kap"></tr>
+        <tr id="pokaz2_kap"></tr>
+    </table><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

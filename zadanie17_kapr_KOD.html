@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 17 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 17</h2>
+    <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 17 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+
+        document.write("<h2>Odpowiedzi na pytania teoretyczne</h2>");
+        
+        document.write("<p><b><u>1. Wymień cztery sposoby wyprowadzania danych w JS:</u></b></p>");
+        document.write("<ul>");
+        document.write("<li>z użyciem dokument.write()</li>");
+        document.write("<li>z użyciem okienka alert()</li>");
+        document.write("<li>do okienek formularza</li>");
+        document.write("<li>do tabeli</li>");
+        document.write("</ul>");
+        
+        document.write("<p><b><u>2. Czym jest funkcja w JS, omów przy użyciu 4 podpunktów:</u></b></p>");
+        document.write("<ul>");
+        document.write("<li>Jest to zbiór zgrupowanych instrukcji, które możemy uruchamiać poprzez podanie ich nazwy</li>");
+        document.write("<li>Każda funkcja po wywołaniu wykonuje swój wewnętrzny kod</li>");
+        document.write("<li>Funkcja może mieć argumenty, które wchodzą do wnętrza funkcji i są tam przetwarzane np. suma_kap(a, b)</li>");
+        document.write("<li>Może (nie zawsze) zwrócić obliczoną wartość zapisaną po słowie kluczowym return</li>");
+        document.write("</ul>");
+        
+        document.write("<p><b><u>3. Omów metody getElementsByName, getElementById, getElementByTagName:</u></b></p>");
+        document.write("<table border='1' cellpadding='5'>");
+        document.write("<tr><th>Metoda</th><th>Opis</th></tr>");
+        document.write("<tr><td>getElementById('id')</td><td>dostęp do elementu o konkretnej wartości atrybutu id</td></tr>");
+        document.write("<tr><td>getElementsByTagName('znacznik')</td><td>dostęp do wszystkich elementów o typie znacznika, np. P lub DIV</td></tr>");
+        document.write("<tr><td>getElementsByName('nazwa')</td><td>dostęp do wszystkich elementów o konkretnej wartości atrybutu name</td></tr>");
+        document.write("</table>");
+        
+        document.write("<p><b><u>4. Omów właściwości innerHTML innerText className:</u></b></p>");
+        document.write("<p><b>innerHTML:</b> Pozwala na odczyt lub zmianę kodu HTML wewnątrz elementu</p>");
+        document.write("<p><b>innerText:</b> Pozwala na odczyt lub zmianę tekstu wewnątrz elementu (bez znaczników HTML)</p>");
+        document.write("<p><b>className:</b> Pozwala na odczyt lub zmianę klasy CSS elementu</p>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

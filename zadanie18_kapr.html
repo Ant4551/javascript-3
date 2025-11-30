@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 18 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 18</h2>
+    <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 18 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+
+        var A_kap = parseFloat(prompt("Podaj pierwszą liczbę A=", ""));
+        var B_kap = parseFloat(prompt("Podaj drugą liczbę B=", ""));
+        
+        function suma_kwadratow_kap(a, b) {
+            return Math.pow(a, 2) + 2*a*b + Math.pow(b, 2);
+        }
+        
+        document.write("<div style='color:navy;font-size:20px;width:100%;'>");
+        document.write("wczytane liczby:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A=" + A_kap + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B=" + B_kap + "<br><br>");
+        document.write("(" + A_kap + " + " + B_kap + ")<sup>2</sup> = ");
+        document.write(A_kap + "<sup>2</sup> + 2*" + A_kap + "*" + B_kap + " + " + B_kap + "<sup>2</sup> = ");
+        document.write(Math.pow(A_kap, 2) + " + " + (2*A_kap*B_kap) + " + " + Math.pow(B_kap, 2) + " = ");
+        document.write("<b>" + suma_kwadratow_kap(A_kap, B_kap) + "</b>");
+        document.write("</div>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

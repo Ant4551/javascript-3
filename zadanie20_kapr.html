@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 20 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+       
+        function AB_kap() {
+            var xa_kap = parseFloat(document.getElementById('xa_kap').value);
+            var ya_kap = parseFloat(document.getElementById('ya_kap').value);
+            var xb_kap = parseFloat(document.getElementById('xb_kap').value);
+            var yb_kap = parseFloat(document.getElementById('yb_kap').value);
+            
+            var dlugosc = Math.sqrt(Math.pow(xa_kap - xb_kap, 2) + Math.pow(ya_kap - yb_kap, 2));
+            document.getElementById("wynik_ab_kap").innerHTML = "Długość AB = " + dlugosc.toFixed(2);
+        }
+        
+        function BC_kap() {
+            var xb_kap = parseFloat(document.getElementById('xb_kap').value);
+            var yb_kap = parseFloat(document.getElementById('yb_kap').value);
+            var xc_kap = parseFloat(document.getElementById('xc_kap').value);
+            var yc_kap = parseFloat(document.getElementById('yc_kap').value);
+            
+            var dlugosc = Math.sqrt(Math.pow(xb_kap - xc_kap, 2) + Math.pow(yb_kap - yc_kap, 2));
+            document.getElementById("wynik_bc_kap").innerHTML = "Długość BC = " + dlugosc.toFixed(2);
+        }
+        
+        function AC_kap() {
+            var xa_kap = parseFloat(document.getElementById('xa_kap').value);
+            var ya_kap = parseFloat(document.getElementById('ya_kap').value);
+            var xc_kap = parseFloat(document.getElementById('xc_kap').value);
+            var yc_kap = parseFloat(document.getElementById('yc_kap').value);
+            
+            var dlugosc = Math.sqrt(Math.pow(xa_kap - xc_kap, 2) + Math.pow(ya_kap - yc_kap, 2));
+            document.getElementById("wynik_ac_kap").innerHTML = "Długość AC = " + dlugosc.toFixed(2);
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Obliczanie długości boków trójkąta</h2>
+    Punkt A: x=<input type="text" id="xa_kap" size="5"> y=<input type="text" id="ya_kap" size="5"><br>
+    Punkt B: x=<input type="text" id="xb_kap" size="5"> y=<input type="text" id="yb_kap" size="5"><br>
+    Punkt C: x=<input type="text" id="xc_kap" size="5"> y=<input type="text" id="yc_kap" size="5"><br><br>
+    <input type="button" value="Oblicz AB" onclick="AB_kap()">
+    <input type="button" value="Oblicz BC" onclick="BC_kap()">
+    <input type="button" value="Oblicz AC" onclick="AC_kap()"><br><br>
+    <div id="wynik_ab_kap" style="color:red; font-size:16px;"></div>
+    <div id="wynik_bc_kap" style="color:blue; font-size:16px;"></div>
+    <div id="wynik_ac_kap" style="color:green; font-size:16px;"></div><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

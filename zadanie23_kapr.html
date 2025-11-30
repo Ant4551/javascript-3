@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 23 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F
+        // Zadanie 23 - Drabina
+        
+        function dlugosc_drabiny_kap(D_kap, X_kap) {
+            var dlugosc = Math.sqrt(D_kap * D_kap + X_kap * X_kap);
+            return dlugosc;
+        }
+        
+        function kat_nachylenia_kap(D_kap, X_kap) {
+            var radiany = Math.atan(D_kap / X_kap);
+            var stopnie = (radiany * 180) / Math.PI;
+            return stopnie;
+        }
+        
+        function oblicz_drabine_kap() {
+            var D_kap = parseFloat(document.getElementById('D_kap').value);
+            var X_kap = parseFloat(document.getElementById('X_kap').value);
+            
+            var dlugosc = dlugosc_drabiny_kap(D_kap, X_kap);
+            var kat = kat_nachylenia_kap(D_kap, X_kap);
+            
+            document.getElementById('dlugosc_kap').value = dlugosc.toFixed(2);
+            document.getElementById('kat_kap').value = kat.toFixed(2);
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Drabina oparta o mur</h2>
+    Podaj D (wysokość): <input type="text" id="D_kap"><br>
+    Podaj X (odległość): <input type="text" id="X_kap"><br><br>
+    <input type="button" value="Oblicz" onclick="oblicz_drabine_kap()"><br><br>
+    Długość drabiny: <input type="text" id="dlugosc_kap" readonly> m<br>
+    Kąt nachylenia: <input type="text" id="kat_kap" readonly> °<br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

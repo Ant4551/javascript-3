@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 24 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F
+        // Zadanie 24 - Obliczenia z x1 i x2
+        
+        var x1_kap = parseFloat(prompt("Podaj x1=", ""));
+        var x2_kap = parseFloat(prompt("Podaj x2=", ""));
+        
+        // y1 = 3 * x1^6 + 2 (ANTONI ma 6 liter)
+        var y1_kap = 3 * Math.pow(x1_kap, 6) + 2;
+        
+        // y2 = 2 * cos(x1) + 3 * sin(x1)
+        var x1_rad = (x1_kap * Math.PI) / 180;
+        var y2_kap = 2 * Math.cos(x1_rad) + 3 * Math.sin(x1_rad);
+        
+        // y3 = ∛(x1^5 + 2 * x2^4) * |x1 - x2|
+        var y3_kap = Math.pow(Math.pow(x1_kap, 5) + 2 * Math.pow(x2_kap, 4), 1/3) * Math.abs(x1_kap - x2_kap);
+        
+        document.write("wczytane liczby:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1=" + x1_kap + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2=" + x2_kap + "<br><br>");
+        document.write("x1 w stopniach: " + x1_kap + " [stopniach]<br>");
+        document.write("x1 w radianach: " + x1_rad.toFixed(2) + " [radianach]<br><br>");
+        document.write("y1 = " + y1_kap.toFixed(2) + "<br>");
+        document.write("y2 = " + y2_kap.toFixed(2) + "<br>");
+        document.write("y3 = " + y3_kap.toFixed(2) + "<br>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>
