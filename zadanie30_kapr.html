@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 30 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        
+        
+        document.write("<div style='color:blue; font-size:20px;'>");
+        document.write("<H1>Programowanie obiektowe - Zadanie 30</H1>");
+        document.write("<H2>Definicja obiektu Monitor</H2>");
+        document.write("</div>");
+        
+        
+        var Monitor_kap = {
+            marka: 'Samsung',
+            przekatna: 27,
+            rozdzielczosc: '2560x1440',
+            monitor_wyswietl_kapral: function() {
+                document.write(this.marka + ' ' + this.przekatna + '" ' + this.rozdzielczosc);
+            }
+        };
+        
+      
+        document.write("<p>Wywołanie metody monitor_wyswietl_kapral():<br>");
+        Monitor_kap.monitor_wyswietl_kapral();
+        document.write("</p>");
+        
+        document.write("<H2>Informacje o obiekcie:</H2>");
+        document.write("<p><b>Nazwa obiektu:</b> Monitor_kap</p>");
+        document.write("<p><b>Właściwości (3 pola):</b></p>");
+        document.write("<ul>");
+        document.write("<li>marka: " + Monitor_kap.marka + "</li>");
+        document.write("<li>przekatna: " + Monitor_kap.przekatna + "\"</li>");
+        document.write("<li>rozdzielczosc: " + Monitor_kap.rozdzielczosc + "</li>");
+        document.write("</ul>");
+        document.write("<p><b>Metoda:</b> monitor_wyswietl_kapral()</p>");
+        
+        document.write("<H2>Struktura kodu:</H2>");
+        document.write("<pre style='background-color:#f0f0f0; padding:10px;'>");
+        document.write("var Monitor_kap = {\n");
+        document.write("    marka: 'Samsung',\n");
+        document.write("    przekatna: 27,\n");
+        document.write("    rozdzielczosc: '2560x1440',\n");
+        document.write("    monitor_wyswietl_kapral: function() {\n");
+        document.write("        document.write(this.marka + ' ' + this.przekatna + '\" ' + this.rozdzielczosc);\n");
+        document.write("    }\n");
+        document.write("};");
+        document.write("</pre>");
+        
+        document.write("<H2>Dane autora:</H2>");
+        document.write("<p>Autor: Antoni Kapral</p>");
+        document.write("<p>Klasa: 3F</p>");
+        document.write("<p>Numer w dzienniku: 10</p>");
+        document.write("<p>Data wykonania: 2.8.2025</p>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

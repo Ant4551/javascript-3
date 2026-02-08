@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 28 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 28 - Teoria programowania obiektowego
+        
+        document.write("<H1>Odpowiedzi na pytania teoretyczne - Zadanie 28</H1>");
+        
+        document.write("<H2>1. Rodzaje „filozofii” programowania:</H2>");
+        document.write("<p>1) Programowanie strukturalne</p>");
+        document.write("<p>2) Programowanie obiektowe</p>");
+        
+        document.write("<H2>2. Opisz paradygmat programowania strukturalnego. Założenia programowania strukturalnego:</H2>");
+        document.write("<p><b>Programowanie strukturalne</b> – paradygmat programowania opierający się na podziale kodu źródłowego programu na procedury i hierarchicznie ułożone bloki z wykorzystaniem struktur kontrolnych w postaci instrukcji wyboru i pętli.</p>");
+        document.write("<p>Programowanie strukturalne zwiększa czytelność i ułatwia analizę programów, co stanowi znaczącą poprawę w stosunku do trudnego w utrzymaniu „spaghetti code” często wynikającego z użycia instrukcji goto.</p>");
+        document.write("<p><b>Założenia programowania strukturalnego:</b></p>");
+        document.write("<ol>");
+        document.write("<li>Podzielone bloki kodu mają jeden punkt wejścia (mogą mieć wiele punktów wyjścia)</li>");
+        document.write("<li>Wykonywanie wyrażeń w określonej kolejności</li>");
+        document.write("<li>Używanie instrukcji warunkowych (if, if else)</li>");
+        document.write("<li>Używanie pętli (for, while, do while)</li>");
+        document.write("<li>Unikanie instrukcji skoku (goto)</li>");
+        document.write("<li>Unikanie instrukcji break, continue</li>");
+        document.write("<li>W programowaniu proceduralnym (strukturalne) funkcje i zmienne opisujące dany przedmiot nie są ze sobą powiązane</li>");
+        document.write("</ol>");
+        
+        document.write("<H2>3. Programowanie obiektowe: definicja (angielski skrót, obiekty, stan, zachowanie, końcowa konkluzja czym jest programowanie obiektowe):</H2>");
+        document.write("<p><b>Programowanie obiektowe</b> (ang. <i>object-oriented programming - OOP</i>) – sposób programowania, w którym programy definiuje się za pomocą:</p>");
+        document.write("<ul>");
+        document.write("<li><b>Obiektów</b> – obiekty powoływane są do życia wirtualnego przez programistę, mogą być kasowane przez programistę (np. okienka w Windows)</li>");
+        document.write("<li><b>Stan</b> – obiekt ma jakiś stan (czyli dane, w programowaniu obiektowym nazywane najczęściej polami) np. wielkość okienka w Windows</li>");
+        document.write("<li><b>Zachowanie</b> – obiekt wykazuje pewne zachowanie (czyli posiada pewne procedury w programowaniu obiektowym nazywane metody) np. jest zdefiniowana metoda do zmiany wielkości okienka</li>");
+        document.write("</ul>");
+        document.write("<p><b>Konkluzja:</b> Programowanie obiektowe to wyrażanie programu komputerowego jako zbioru obiektów, komunikujących się pomiędzy sobą w celu wykonywania zadań.</p>");
+        
+        document.write("<H2>4. Dlaczego stosujemy programowanie obiektowe?</H2>");
+        document.write("<ol>");
+        document.write("<li>Jest to bardziej naturalne podejście przez programistę podczas tworzenia programów ponieważ otaczający nas świat to różnego rodzaju przedmioty</li>");
+        document.write("<li>Programowanie obiektowe pozwala na lepsze gospodarowanie pamięcią komputera</li>");
+        document.write("<li>Dobrze napisana i przetestowana klasa pozwala na stosowaniu przez innych programistów, co oszczędza czas i środki pieniężne</li>");
+        document.write("</ol>");
+        
+        document.write("<H2>5. Omów następujące pojęcia (w krótkiej formie):</H2>");
+        document.write("<p><b>Klasa</b> – rodzaj foremki, która opisuje jak będą wyglądać tworzone na jej podstawie nowe obiekty</p>");
+        document.write("<p><b>Obiekt</b> – instancja (byt, twór) który powstał na podstawie klasy</p>");
+        document.write("<p><b>Właściwość</b> – własność obiektu, np. kolor</p>");
+        document.write("<p><b>Metoda</b> – zdolność (czynność) którą umie wykonywać obiekt, np. chodzenie</p>");
+        document.write("<p><b>Konstruktor</b> – metoda wywoływana w momencie inicjalizacji obiektu</p>");
+        document.write("<p><b>Dziedziczenie</b> – klasa może dziedziczyć własności od innej klasy</p>");
+        document.write("<p><b>Hermetyzacja</b> – ukrywanie pól i metod przed \"zewnętrznym światem\" klasy</p>");
+        document.write("<p><b>Polimorfizm</b> – wielopostaciowość, oznacza że dany obiekt może zmieniać swoją postać w zależności od potrzeb</p>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

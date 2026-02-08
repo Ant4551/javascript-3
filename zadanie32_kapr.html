@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 32 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 32 - Konstruktor z użyciem prototypu
+        
+        // Definiowanie konstruktora (klasy) Monitor
+        function Monitor_kap(marka_k, przekatna_k, rozdzielczosc_k, czestotliwosc_k) {
+            this.marka = marka_k;
+            this.przekatna = przekatna_k;
+            this.rozdzielczosc = rozdzielczosc_k;
+            this.czestotliwosc = czestotliwosc_k;
+        }
+        
+        // Dodanie metody do konstruktora z użyciem prototypu
+        Monitor_kap.prototype.monitor_wyswietl_kapral = function() {
+            document.write("Marka: " + this.marka + "<br>");
+            document.write("Przekątna: " + this.przekatna + "\"<br>");
+            document.write("Rozdzielczość: " + this.rozdzielczosc + "<br>");
+            document.write("Częstotliwość: " + this.czestotliwosc + "<br><br>");
+        };
+        
+        // Dodanie drugiej metody przez prototype
+        Monitor_kap.prototype.monitor_pokaz_kapral = function() {
+            document.write("Specyfikacja monitora " + this.marka + ": " + 
+                          this.przekatna + "\", " + this.rozdzielczosc + ", " + 
+                          this.czestotliwosc + "<br>");
+        };
+        
+        document.write("<H1>Programowanie obiektowe - Zadanie 32</H1>");
+        document.write("<H2>Konstruktor z użyciem prototypu</H2>");
+        
+        document.write("<p><b>Nazwa konstruktora:</b> Monitor_kap</p>");
+        document.write("<p><b>Pola konstruktora (4 pola):</b></p>");
+        document.write("<ul>");
+        document.write("<li>marka</li>");
+        document.write("<li>przekatna</li>");
+        document.write("<li>rozdzielczosc</li>");
+        document.write("<li>czestotliwosc</li>");
+        document.write("</ul>");
+        
+        document.write("<p><b>Metoda dodana przez prototype:</b> monitor_wyswietl_kapral()</p>");
+        document.write("<p><b>Druga metoda przez prototype:</b> monitor_pokaz_kapral()</p>");
+        
+        document.write("<H2>Powołanie 3 obiektów:</H2>");
+        
+        // Powołanie 3 obiektów
+        var monitor1_kap = new Monitor_kap("Samsung", 27, "2560x1440", "144Hz");
+        var monitor2_kap = new Monitor_kap("LG", 24, "1920x1080", "75Hz");
+        var monitor3_kap = new Monitor_kap("Dell", 32, "3840x2160", "60Hz");
+        
+        document.write("<p><b>Obiekt 1:</b> monitor1_kap</p>");
+        monitor1_kap.monitor_wyswietl_kapral();
+        
+        document.write("<p><b>Obiekt 2:</b> monitor2_kap</p>");
+        monitor2_kap.monitor_wyswietl_kapral();
+        
+        document.write("<p><b>Obiekt 3:</b> monitor3_kap</p>");
+        monitor3_kap.monitor_wyswietl_kapral();
+        
+        document.write("<H2>Użycie drugiej metody:</H2>");
+        monitor1_kap.monitor_pokaz_kapral();
+        monitor2_kap.monitor_pokaz_kapral();
+        monitor3_kap.monitor_pokaz_kapral();
+        
+        document.write("<H2>Dostęp do właściwości obiektów:</H2>");
+        document.write("monitor1_kap.marka = " + monitor1_kap.marka + "<br>");
+        document.write("monitor2_kap.przekatna = " + monitor2_kap.przekatna + "\"<br>");
+        document.write("monitor3_kap.rozdzielczosc = " + monitor3_kap.rozdzielczosc + "<br>");
+        
+        document.write("<H2>Informacje o programie:</H2>");
+        document.write("<p>Data: 2.8.2025</p>");
+        document.write("<p>Autor: Antoni Kapral 3F</p>");
+        document.write("<p>Numer w dzienniku: 10</p>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

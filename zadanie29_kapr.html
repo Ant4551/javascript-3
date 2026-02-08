@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 29 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 29 - Teoria OOP zaawansowane
+        
+        document.write("<H1>Odpowiedzi na pytania teoretyczne - Zadanie 29</H1>");
+        
+        document.write("<H2>1. W jaki sposób można określić właściwość danego obiektu (dwa sposoby wraz z przykładami)?</H2>");
+        document.write("<p><b>Sposób 1:</b> Używając zapisu z kropką</p>");
+        document.write("<p>auto_kap.marka='Samsung';<br>auto_kap.rok=2024;</p>");
+        document.write("<p><b>Sposób 2:</b> Używając zapisu z nawiasami kwadratowymi</p>");
+        document.write("<p>auto_kap['marka']='Samsung';<br>auto_kap['rok']=2024;</p>");
+        
+        document.write("<H2>2. W jaki sposób można odwołać się do pól (właściwości) i metod?</H2>");
+        document.write("<p>Do właściwości i metod można się odwołać podobnie jak do zwykłych zmiennych i funkcji, trzeba tylko przed ich nazwą umieścić nazwę obiektu i kropkę.</p>");
+        document.write("<p>Przykład: console.log(samochod_kap.kolor);</p>");
+        
+        document.write("<H2>3. Wymień cechy charakterystyczne konstruktora:</H2>");
+        document.write("<ol>");
+        document.write("<li>Jest wywoływany automatycznie w chwili tworzenia obiektu danej klasy</li>");
+        document.write("<li>Nazywa się tak samo jak klasa</li>");
+        document.write("<li>Nie zwraca żadnej wartości</li>");
+        document.write("<li>Może przyjmować argumenty - tak jak zwykła funkcja czy metoda</li>");
+        document.write("</ol>");
+        
+        document.write("<H2>4. Konstruowanie obiektu na podstawie przykładu→obiekt ma trzy pola oraz jedną metodę:</H2>");
+        document.write("<pre>");
+        document.write("var osoba_kap = {\n");
+        document.write("    nazwisko : 'Kapral',\n");
+        document.write("    imie : 'Antoni',\n");
+        document.write("    zawod : 'uczeń',\n");
+        document.write("    wyswietl : function () {\n");
+        document.write("        document.write(this.nazwisko + ' ' + this.imie)\n");
+        document.write("    }\n");
+        document.write("}");
+        document.write("</pre>");
+        
+        document.write("<H2>5. Znaczenie słowa this. Jak oddzielamy pola oraz metody?</H2>");
+        document.write("<p><b>this</b> – pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu.</p>");
+        document.write("<p><b>Oddzielanie:</b> Metody i pola muszą być oddzielone przecinkami w obrębie jednego obiektu.</p>");
+        
+        document.write("<H2>6. Konstruktor w JS na podstawie przykładu wraz z opisem:</H2>");
+        document.write("<pre>");
+        document.write("function klient_kap(nazwisko_k, imie_k, zawod_k) {\n");
+        document.write("    this.nazwisko = nazwisko_k;\n");
+        document.write("    this.imie = imie_k;\n");
+        document.write("    this.zawod = zawod_k;\n");
+        document.write("    this.wyswietl = function () {\n");
+        document.write("        alert(this.nazwisko + ' ' + this.imie)\n");
+        document.write("    }\n");
+        document.write("}");
+        document.write("</pre>");
+        document.write("<p>Konstruktor tworzy nowy typ obiektu z właściwościami i metodami.</p>");
+        
+        document.write("<H2>7. Znaczenie słowa kluczowego New wraz z przykładem:</H2>");
+        document.write("<p><b>new</b> – służy do tworzenia nowego obiektu na podstawie konstruktora.</p>");
+        document.write("<p>Przykład: var osoba1_kap = new klient_kap('Kapral', 'Antoni', 'uczeń');</p>");
+        
+        document.write("<H2>8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem:</H2>");
+        document.write("<p><b>prototype</b> – właściwość używana do dodawania metod i właściwości do wszystkich obiektów utworzonych przez dany konstruktor.</p>");
+        document.write("<pre>");
+        document.write("function klient_kap() {\n");
+        document.write("    this.nazwisko = 'Kapral';\n");
+        document.write("    this.imie = 'Antoni';\n");
+        document.write("}\n\n");
+        document.write("klient_kap.prototype.wyswietl = function () {\n");
+        document.write("    document.write(this.nazwisko + ' ' + this.imie)\n");
+        document.write("}\n\n");
+        document.write("klient_kap.prototype.zawod = 'uczeń';\n");
+        document.write("var osoba1_kap = new klient_kap();\n");
+        document.write("osoba1_kap.wyswietl();");
+        document.write("</pre>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

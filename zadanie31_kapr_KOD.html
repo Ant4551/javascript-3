@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 31 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 31</h2>
+    <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 31 - Kapral</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 31 - Dodawanie właściwości i metod do istniejącego obiektu
+        
+        // Definicja obiektu Monitor (jak w zadaniu 30)
+        var Monitor_kap = {
+            marka: 'Samsung',
+            przekatna: 27,
+            rozdzielczosc: '2560x1440',
+            monitor_wyswietl_kapral: function() {
+                document.write(this.marka + ' ' + this.przekatna + '" ' + this.rozdzielczosc);
+            }
+        };
+        
+        // Dodanie nowej właściwości POZA ciałem obiektu
+        Monitor_kap.czestotliwosc = '144Hz';
+        
+        // Dodanie nowej metody POZA ciałem obiektu
+        Monitor_kap.monitor_pokaz_kapral = function() {
+            document.write("Częstotliwość odświeżania: " + this.czestotliwosc);
+        };
+        
+        document.write("<H1>Programowanie obiektowe - Zadanie 31</H1>");
+        document.write("<H2>Rozszerzenie obiektu Monitor</H2>");
+        
+        document.write("<p><b>Nazwa obiektu:</b> Monitor_kap</p>");
+        
+        document.write("<p><b>Oryginalne pola (z Zadania 30):</b></p>");
+        document.write("<ul>");
+        document.write("<li>marka</li>");
+        document.write("<li>przekatna</li>");
+        document.write("<li>rozdzielczosc</li>");
+        document.write("</ul>");
+        
+        document.write("<p><b>Nowe pole (dodane poza ciałem obiektu):</b> czestotliwosc</p>");
+        
+        document.write("<p><b>Oryginalna metoda (z Zadania 30):</b> monitor_wyswietl_kapral()</p>");
+        
+        document.write("<p><b>Nowa metoda (dodana poza ciałem obiektu):</b> monitor_pokaz_kapral()</p>");
+        
+        document.write("<H2>Wywołanie metod:</H2>");
+        document.write("<p><b>Oryginalna metoda monitor_wyswietl_kapral():</b><br>");
+        Monitor_kap.monitor_wyswietl_kapral();
+        document.write("</p>");
+        
+        document.write("<p><b>Nowa metoda monitor_pokaz_kapral():</b><br>");
+        Monitor_kap.monitor_pokaz_kapral();
+        document.write("</p>");
+        
+        document.write("<H2>Dane autora:</H2>");
+        document.write("<p>Autor: Antoni Kapral</p>");
+        document.write("<p>Klasa: 3F</p>");
+        document.write("<p>Numer w dzienniku: 10</p>");
+        document.write("<p>Data wykonania: 2.8.2025</p>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>
