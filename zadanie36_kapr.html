@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 36 - Kapral</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 36 - Parzysta czy nieparzysta
+        
+        var x_kap = prompt("podaj liczbę x=","");
+        var a_kap = parseFloat(x_kap);
+        
+        document.write("wczytana liczba x=" + a_kap + "<br>");
+        
+        if(a_kap % 2 == 0) {
+            // parzysta
+            document.write("<font color=red size=3>liczba jest parzysta</font>" + "<br>");
+        } else {
+            // nieparzysta
+            document.write("<font color=silver size=5>liczba jest nieparzysta</font>" + "<br>");
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

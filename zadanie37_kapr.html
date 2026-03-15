@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 37 - Kapral</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 37 - Rok JavaScript
+        
+        var rok_kap = prompt("Od którego roku działa JavaScript?", "");
+        var rok_liczba = parseFloat(rok_kap);
+        
+        document.write("wczytany rok = " + rok_liczba + "<br>");
+        
+        // JavaScript został stworzony w 1995 roku
+        if(rok_liczba == 1995) {
+            document.write("<font color=blue size=4>Brawo znasz rok od kiedy działa JavaScript</font>" + "<br>");
+        } else {
+            document.write("<font color=red size=7>Źle musisz jeszcze poczytać</font>" + "<br>");
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

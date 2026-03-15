@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 37 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 37</h2>
+    <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 37 - Kapral</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="JavaScript">
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 37 - Rok JavaScript
+        
+        var rok_kap = prompt("Od którego roku działa JavaScript?", "");
+        var rok_liczba = parseFloat(rok_kap);
+        
+        document.write("wczytany rok = " + rok_liczba + "&lt;br&gt;");
+        
+        // JavaScript został stworzony w 1995 roku
+        if(rok_liczba == 1995) {
+            document.write("&lt;font color=blue size=4&gt;Brawo znasz rok od kiedy działa JavaScript&lt;/font&gt;" + "&lt;br&gt;");
+        } else {
+            document.write("&lt;font color=red size=7&gt;Źle musisz jeszcze poczytać&lt;/font&gt;" + "&lt;br&gt;");
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

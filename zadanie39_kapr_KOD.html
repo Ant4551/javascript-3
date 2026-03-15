@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 39 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 39</h2>
+    <textarea cols="90" rows="24">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 39 - Kapral&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 39 - Wybór koloru
+
+function fun_kap() {
+    var x_kap = prompt("Podaj kolor (1 - CZERWONY, 2 - NIEBIESKI)", "");
+    
+    // Sprawdzenie czy to liczba czy tekst
+    if(x_kap == 1 || x_kap.toLowerCase() == "czerwony") {
+        document.write('&lt;h1 style="color:red;"&gt;wczytałeś kolor czerwony&lt;/h1&gt;&lt;br /&gt;');
+    }
+    else if(x_kap == 2 || x_kap.toLowerCase() == "niebieski") {
+        document.write('&lt;h6 style="color:blue;"&gt;wczytałeś kolor niebieski&lt;/h6&gt;&lt;br /&gt;');
+    }
+    else {
+        document.write('&lt;p style="color:black;"&gt;Nieprawidłowy wybór&lt;/p&gt;');
+    }
+    
+    function okno_zamknij_kapral() {
+        window.close();
+    }
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div style="color:green; font-size:20px;"&gt;
+        &lt;h2&gt;MENU&lt;/h2&gt;
+        &lt;p style="color:green;"&gt;1-CZERWONY&lt;/p&gt;
+        &lt;p style="color:red;"&gt;2-NIEBIESKI&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;input type="button" name="kapral" value="Oblicz" onclick="fun_kap()" /&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

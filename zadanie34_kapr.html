@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 34 - Kapral</title>
+    <meta charset="utf-8">
+    <style>
+        .user-container {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        .user-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #764ba2;
+        }
+        .user-email {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 15px;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        .user-email:hover {
+            background-color: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+        .refresh-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .refresh-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 34 - UserView Constructor
+        
+        // Konstruktor User
+        function User_kap(email_kap, avatar_kap) {
+            this.email = email_kap;
+            this.avatar = avatar_kap || '👤'; // domyślny avatar jeśli nie podany
+        }
+        
+        // Konstruktor UserView
+        function UserView_kap(user_kap) {
+            // Przypisanie obiektu User jako właściwości
+            this.user = user_kap;
+            
+            // Generowanie elementu li
+            this.dom = document.createElement('li');
+            this.dom.className = 'user-item';
+            
+            // Tworzenie elementu z awatarem
+            var avatarElement = document.createElement('div');
+            avatarElement.className = 'user-avatar';
+            avatarElement.innerHTML = this.user.avatar;
+            
+            // Tworzenie linku email
+            var emailLink = document.createElement('a');
+            emailLink.className = 'user-email';
+            emailLink.href = 'mailto:' + this.user.email;
+            emailLink.innerHTML = this.user.email;
+            
+            // Dodanie elementów do li
+            this.dom.appendChild(avatarElement);
+            this.dom.appendChild(emailLink);
+        }
+        
+        // Dodanie metody refresh do prototypu UserView
+        UserView_kap.prototype.refresh = function() {
+            // Odświeżenie danych użytkownika w elemencie dom
+            var avatarElement = this.dom.querySelector('.user-avatar');
+            var emailLink = this.dom.querySelector('.user-email');
+            
+            if (avatarElement) {
+                avatarElement.innerHTML = this.user.avatar;
+            }
+            
+            if (emailLink) {
+                emailLink.href = 'mailto:' + this.user.email;
+                emailLink.innerHTML = this.user.email;
+            }
+            
+            // Dodanie animacji odświeżenia
+            this.dom.style.transition = 'all 0.3s ease';
+            this.dom.style.transform = 'scale(1.02)';
+            setTimeout(function() {
+                this.dom.style.transform = 'scale(1)';
+            }.bind(this), 300);
+        };
+        
+        // Funkcja do testowania z podanymi emailami
+        function testuj_kap() {
+            // Utworzenie użytkowników z podanymi emailami
+            var user1_kap = new User_kap('a.kapral@outlook.com', '👨‍💻');
+            var user2_kap = new User_kap('122kapral@gmail.com', '👩‍💼');
+            var user3_kap = new User_kap('X.kapral@outlook.com', '👨‍🔧');
+            
+            // Utworzenie widoków dla użytkowników
+            var view1_kap = new UserView_kap(user1_kap);
+            var view2_kap = new UserView_kap(user2_kap);
+            var view3_kap = new UserView_kap(user3_kap);
+            
+            // Pobranie kontenera i dodanie elementów
+            var container = document.getElementById('userList_kap');
+            container.appendChild(view1_kap.dom);
+            container.appendChild(view2_kap.dom);
+            container.appendChild(view3_kap.dom);
+            
+            // Zapisanie referencji do późniejszego użycia
+            window.view1_kap = view1_kap;
+            window.view2_kap = view2_kap;
+            window.view3_kap = view3_kap;
+            
+            // Wyświetlenie informacji
+            document.getElementById('info_kap').innerHTML = 'Utworzono 3 użytkowników z podanymi adresami email';
+        }
+        
+        // Funkcja do odświeżenia danych
+        function odswiez_kap() {
+            if (window.view1_kap) {
+                // Zmiana danych użytkownika 1
+                window.view1_kap.user.email = 'a.kapral.updated@outlook.com';
+                window.view1_kap.user.avatar = '👨‍🎓';
+                
+                // Odświeżenie widoku
+                window.view1_kap.refresh();
+                
+                document.getElementById('status_kap').innerHTML = 'Odświeżono dane dla użytkownika a.kapral@outlook.com! Nowy email: a.kapral.updated@outlook.com';
+                document.getElementById('status_kap').style.display = 'block';
+                
+                setTimeout(function() {
+                    document.getElementById('status_kap').style.display = 'none';
+                }, 4000);
+            }
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body onload="testuj_kap()">
+    <h1>Zadanie 34 - UserView Constructor</h1>
+    <h2>Antoni Kapral 3F - 2.8.2025</h2>
+    
+    <div class="user-container">
+        <h3>Lista użytkowników z podanymi emailami:</h3>
+        <ul id="userList_kap" style="list-style-type: none; padding: 0;"></ul>
+        
+        <p id="info_kap" style="color: green; font-weight: bold;"></p>
+        
+        <button class="refresh-btn" onclick="odswiez_kap()">Odśwież dane użytkownika 1</button>
+        
+        <div id="status_kap" style="margin-top: 10px; padding: 10px; background-color: #e7f3fe; border-left: 4px solid #2196F3; display: none; font-weight: bold;"></div>
+    </div>
+    
+    <br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

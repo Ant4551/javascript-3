@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 38 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 38</h2>
+    <textarea cols="90" rows="24">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 38 - Kapral&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 38 - Przedziały liczbowe
+
+// Obliczenia dla ANTONI KAPRAL
+// imię: ANTONI - 6 liter
+// nazwisko: KAPRAL - 6 liter
+// dzień urodzenia: zakładam 15 (przykład)
+
+var liczba1_kap = 6;  // liczba liter imienia
+var liczba2_kap = liczba1_kap + 7;  // 13
+var liczba3_kap = 6;  // liczba liter nazwiska
+var liczba4_kap = liczba3_kap + 4;  // 10
+
+var numer_dziennika = 10;
+var rozmiar_czcionki = 40 + (numer_dziennika % 7);
+
+// Wyświetlenie danych
+document.write("&lt;div style='color:green; background-color:silver; font-size:" + rozmiar_czcionki + "px;'&gt;");
+document.write("&lt;b&gt;Moje nazwisko to: Antoni Kapral&lt;/b&gt;&lt;br&gt;");
+document.write("liczba1 = " + liczba1_kap + "&lt;br&gt;");
+document.write("liczba2 = " + liczba1_kap + " + 7 = " + liczba2_kap + "&lt;br&gt;");
+document.write("liczba3 = " + liczba3_kap + "&lt;br&gt;");
+document.write("liczba4 = " + liczba3_kap + " + 4 = " + liczba4_kap + "&lt;br&gt;");
+document.write("&lt;/div&gt;&lt;br&gt;&lt;br&gt;");
+
+// Menu
+rozmiar_czcionki = 40 + (numer_dziennika % 7);
+document.write("&lt;div style='color:red; background-color:silver; font-size:" + rozmiar_czcionki + "px;'&gt;");
+document.write("&lt;b&gt;---MENU---&lt;/b&gt;&lt;br&gt;");
+document.write(liczba1_kap + "-wyświetlanie teorii o operatorach&lt;br&gt;");
+var opcja2 = liczba3_kap + 20;
+document.write(opcja2 + "- czy liczba należy do przedziału (" + liczba1_kap + "; " + liczba2_kap + "]&lt;br&gt;");
+var opcja3 = 15 + 50;  // dzień urodzenia + 50
+document.write(opcja3 + "- czy liczba należy do przedziału (-oo ; " + liczba3_kap + ") lub [" + liczba4_kap + "; +oo)&lt;br&gt;");
+document.write("&lt;/div&gt;&lt;br&gt;");
+
+// Wczytanie opcji
+var opcja_kap = prompt("podaj opcję=", "");
+opcja_kap = parseFloat(opcja_kap);
+
+document.write("&lt;div style='font-size:20px;'&gt;");
+
+// Sprawdzenie czy opcja istnieje
+if((opcja_kap != liczba1_kap) &amp;&amp; (opcja_kap != opcja2) &amp;&amp; (opcja_kap != opcja3)) {
+    document.write("&lt;font color=red size=7&gt;nie ma takiej opcji&lt;/font&gt;&lt;br&gt;");
+}
+
+// Opcja 1 - teoria o operatorach
+if(opcja_kap == liczba1_kap) {
+    document.write("&lt;font color=blue size=7&gt;Jesteś w opcja " + liczba1_kap + " --&gt; teoria&lt;/font&gt;&lt;br&gt;");
+    document.write("&amp;&amp; &amp;nbsp;&amp;nbsp;&amp;nbsp; i &amp;nbsp;&amp;nbsp;&amp;nbsp; x=3 y=4 (x &lt; 9 &amp;&amp; y &gt; 2) wynik--&gt;prawda&lt;br&gt;");
+    document.write("|| &amp;nbsp;&amp;nbsp;&amp;nbsp; lub &amp;nbsp;&amp;nbsp;&amp;nbsp; x=3 y=4 (x==8 || y==6) wynik--&gt;fałsz&lt;br&gt;");
+    document.write("! &amp;nbsp;&amp;nbsp;&amp;nbsp; zaprzeczenie &amp;nbsp;&amp;nbsp;&amp;nbsp; x=3 y=4 !(x==y) wynik--&gt;prawda&lt;br&gt;");
+}
+
+// Opcja 2 - sprawdzanie przedziału
+if(opcja_kap == opcja2) {
+    document.write("&lt;font color=blue size=7&gt;Jesteś w opcja " + opcja2 + " --&gt; przedział&lt;/font&gt;&lt;br&gt;");
+    var liczba_kap = prompt("podaj liczbę=", "");
+    liczba_kap = parseFloat(liczba_kap);
+    
+    document.write("czy liczba " + liczba_kap + " należy do przedziału (" + liczba1_kap + "; " + liczba2_kap + "] : ");
+    
+    if(liczba_kap &gt; liczba1_kap &amp;&amp; liczba_kap &lt;= liczba2_kap) {
+        document.write("&lt;b&gt;TAK&lt;/b&gt;&lt;br&gt;");
+    } else {
+        document.write("&lt;b&gt;NIE&lt;/b&gt;&lt;br&gt;");
+    }
+}
+
+// Opcja 3 - sprawdzanie przedziału (-oo;liczba3) lub [liczba4;+oo)
+if(opcja_kap == opcja3) {
+    document.write("&lt;font color=blue size=7&gt;Jesteś w opcja " + opcja3 + " --&gt; przedział&lt;/font&gt;&lt;br&gt;");
+    var liczba2_kap = prompt("podaj liczbę=", "");
+    liczba2_kap = parseFloat(liczba2_kap);
+    
+    document.write("czy liczba " + liczba2_kap + " należy do przedziału (-oo ; " + liczba3_kap + ") lub [" + liczba4_kap + "; +oo) : ");
+    
+    if(liczba2_kap &lt; liczba3_kap || liczba2_kap &gt;= liczba4_kap) {
+        document.write("&lt;b&gt;TAK&lt;/b&gt;&lt;br&gt;");
+    } else {
+        document.write("&lt;b&gt;NIE&lt;/b&gt;&lt;br&gt;");
+    }
+}
+
+document.write("&lt;/div&gt;");
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 36 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 36</h2>
+    <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 36 - Kapral</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="JavaScript">
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 36 - Parzysta czy nieparzysta
+        
+        var x_kap = prompt("podaj liczbę x=","");
+        var a_kap = parseFloat(x_kap);
+        
+        document.write("wczytana liczba x=" + a_kap + "&lt;br&gt;");
+        
+        if(a_kap % 2 == 0) {
+            // parzysta
+            document.write("&lt;font color=red size=3&gt;liczba jest parzysta&lt;/font&gt;" + "&lt;br&gt;");
+        } else {
+            // nieparzysta
+            document.write("&lt;font color=silver size=5&gt;liczba jest nieparzysta&lt;/font&gt;" + "&lt;br&gt;");
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

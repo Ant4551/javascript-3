@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 35 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 35</h2>
+    <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 35 - Kapral</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="JavaScript">
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 35 - Określenie znaku liczby
+        
+        var x_kap = prompt("podaj liczbę x=","");
+        var a_kap = parseFloat(x_kap);
+        
+        document.write("<div style='color:red;font-size:50px;'>");
+        document.write("czytana liczba x=" + a_kap + "&lt;br&gt;");
+        
+        if(a_kap &gt; 0) {
+            document.write("czytana liczba jest większa od 0" + "&lt;br&gt;");
+        }
+        if(a_kap == 0) {
+            document.write("czytana liczba jest równa 0" + "&lt;br&gt;");
+        }
+        if(a_kap &lt; 0) {
+            document.write("czytana liczba jest mniejsza od 0" + "&lt;br&gt;");
+        }
+        document.write("&lt;/div&gt;");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

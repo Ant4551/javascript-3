@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 41 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 41</h2>
+    <textarea cols="90" rows="30">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 41 - Kapral&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;style&gt;
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .schemat { font-family: monospace; white-space: pre; background-color: #f0f0f0; padding: 10px; }
+    &lt;/style&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 41 - Teoria pętli
+
+document.write("&lt;h1&gt;Teoria pętli w JavaScript&lt;/h1&gt;");
+
+// Pętla for
+document.write("&lt;h2&gt;1. Pętla for&lt;/h2&gt;");
+document.write("&lt;p&gt;&lt;b&gt;Konstrukcja:&lt;/b&gt; for (inicjalizacja; warunek; inkrementacja) { // kod }&lt;/p&gt;");
+document.write("&lt;p&gt;&lt;b&gt;Opis:&lt;/b&gt; Pętla for wykonuje kod określoną liczbę razy. Składa się z trzech części: inicjalizacji zmiennej, warunku kontynuacji i inkrementacji.&lt;/p&gt;");
+document.write("&lt;p&gt;&lt;b&gt;Przykład:&lt;/b&gt; for(i=1; i&lt;=5; i++) { document.write(i); }&lt;/p&gt;");
+document.write("&lt;div class='schemat'&gt;&lt;b&gt;Schemat blokowy:&lt;/b&gt;&lt;br&gt;");
+document.write("    START&lt;br&gt;");
+document.write("       |&lt;br&gt;");
+document.write("       V&lt;br&gt;");
+document.write("    i = 1&lt;br&gt;");
+document.write("       |&lt;br&gt;");
+document.write("       V&lt;br&gt;");
+document.write("   ┌─────┐&lt;br&gt;");
+document.write("   │ i≤5?│────N────┐&lt;br&gt;");
+document.write("   └─────┘          │&lt;br&gt;");
+document.write("       │ T           V&lt;br&gt;");
+document.write("       V          KONIEC&lt;br&gt;");
+document.write(" Wykonaj kod&lt;br&gt;");
+document.write("       │&lt;br&gt;");
+document.write("       V&lt;br&gt;");
+document.write("   i = i+1&lt;br&gt;");
+document.write("       │&lt;br&gt;");
+document.write("       └─────┘&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+// Pętla while
+document.write("&lt;h2&gt;2. Pętla while (z kontrolowanym wejściem)&lt;/h2&gt;");
+document.write("&lt;p&gt;&lt;b&gt;Konstrukcja:&lt;/b&gt; while (warunek) { // kod }&lt;/p&gt;");
+document.write("&lt;p&gt;&lt;b&gt;Opis:&lt;/b&gt; Pętla while najpierw sprawdza warunek, potem wykonuje kod. Jeśli warunek jest fałszywy na początku, pętla może się nie wykonać ani razu.&lt;/p&gt;");
+document.write("&lt;p&gt;&lt;b&gt;Przykład:&lt;/b&gt; while(i&lt;=5) { document.write(i); i++; }&lt;/p&gt;");
+document.write("&lt;div class='schemat'&gt;&lt;b&gt;Schemat blokowy:&lt;/b&gt;&lt;br&gt;");
+document.write("    START&lt;br&gt;");
+document.write("       |&lt;br&gt;");
+document.write("       V&lt;br&gt;");
+document.write("   ┌─────┐&lt;br&gt;");
+document.write("   │ i≤5?│────N────┐&lt;br&gt;");
+document.write("   └─────┘          │&lt;br&gt;");
+document.write("       │ T           V&lt;br&gt;");
+document.write("       V          KONIEC&lt;br&gt;");
+document.write(" Wykonaj kod&lt;br&gt;");
+document.write("       │&lt;br&gt;");
+document.write("       V&lt;br&gt;");
+document.write("   i = i+1&lt;br&gt;");
+document.write("       │&lt;br&gt;");
+document.write("       └─────┘&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+// Pętla do while
+document.write("&lt;h2&gt;3. Pętla do...while (z kontrolowanym wyjściem)&lt;/h2&gt;");
+document.write("&lt;p&gt;&lt;b&gt;Konstrukcja:&lt;/b&gt; do { // kod } while (warunek);&lt;/p&gt;");
+document.write("&lt;p&gt;&lt;b&gt;Opis:&lt;/b&gt; Pętla do...while zawsze wykona jedną iterację, zanim sprawdzi warunek. Zawsze więc wykona kod przynajmniej raz.&lt;/p&gt;");
+document.write("&lt;p&gt;&lt;b&gt;Przykład:&lt;/b&gt; do { document.write(i); i++; } while(i&lt;=5);&lt;/p&gt;");
+document.write("&lt;div class='schemat'&gt;&lt;b&gt;Schemat blokowy:&lt;/b&gt;&lt;br&gt;");
+document.write("    START&lt;br&gt;");
+document.write("       |&lt;br&gt;");
+document.write("       V&lt;br&gt;");
+document.write(" Wykonaj kod&lt;br&gt;");
+document.write("       |&lt;br&gt;");
+document.write("       V&lt;br&gt;");
+document.write("   i = i+1&lt;br&gt;");
+document.write("       |&lt;br&gt;");
+document.write("       V&lt;br&gt;");
+document.write("   ┌─────┐&lt;br&gt;");
+document.write("   │ i≤5?│────T────┐&lt;br&gt;");
+document.write("   └─────┘          │&lt;br&gt;");
+document.write("       │ N           │&lt;br&gt;");
+document.write("       V              │&lt;br&gt;");
+document.write("    KONIEC            │&lt;br&gt;");
+document.write("       │              │&lt;br&gt;");
+document.write("       └──────────────┘&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

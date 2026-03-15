@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 42 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 42</h2>
+    <textarea cols="90" rows="24">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 42 - Kapral&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 42 - Wypisywanie nazwiska 10 razy
+
+document.write("&lt;div style='color:red;font-size:50px;'&gt;");
+
+for(i_kap=1; i_kap&lt;=10; i_kap++)
+{
+    document.write("wyświetlam " + i_kap + " raz" + " Antoni Kapral" + "&lt;br&gt;");
+}
+
+document.write("&lt;/div&gt;");
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>
