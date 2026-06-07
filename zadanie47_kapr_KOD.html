@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 47 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 47</h2>
+    <textarea cols="90" rows="30">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 47 - Kapral&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 47 - Sprawdzanie czy boki tworzą trójkąt
+
+var a_kap, b_kap, c_kap;
+var poprawny_kap = false;
+
+do {
+    var bok1_kap = prompt("Podaj bok a:", "");
+    var bok2_kap = prompt("Podaj bok b:", "");
+    var bok3_kap = prompt("Podaj bok c:", "");
+    
+    a_kap = parseFloat(bok1_kap);
+    b_kap = parseFloat(bok2_kap);
+    c_kap = parseFloat(bok3_kap);
+    
+    // Sprawdzenie warunków trójkąta
+    if(a_kap &gt; 0 &amp;&amp; b_kap &gt; 0 &amp;&amp; c_kap &gt; 0 &amp;&amp; 
+       a_kap + b_kap &gt; c_kap &amp;&amp; 
+       a_kap + c_kap &gt; b_kap &amp;&amp; 
+       b_kap + c_kap &gt; a_kap) {
+        poprawny_kap = true;
+        document.write("&lt;p style='color:green;'&gt;Boki tworzą trójkąt!&lt;/p&gt;");
+    } else {
+        document.write("&lt;p style='color:red;'&gt;Boki NIE tworzą trójkąta! Podaj ponownie.&lt;/p&gt;");
+    }
+} while(!poprawny_kap);
+
+document.write("&lt;div style='color:blue; font-size:20px;'&gt;");
+document.write("&lt;h2&gt;Zadanie 47 - Antoni Kapral&lt;/h2&gt;");
+document.write("&lt;p&gt;Bok a = " + a_kap + "&lt;/p&gt;");
+document.write("&lt;p&gt;Bok b = " + b_kap + "&lt;/p&gt;");
+document.write("&lt;p&gt;Bok c = " + c_kap + "&lt;/p&gt;");
+document.write("&lt;/div&gt;");
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

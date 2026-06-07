@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 43 - Kapral</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 43 - Wypisz wszystkie liczby parzyste od 2 do wczytanej
+        
+        var koniec_petli_kap = prompt("Podaj koniec pętli (liczbę):", "");
+        var koniec_kap = parseFloat(koniec_petli_kap);
+        
+        document.write("<h2>Zadanie 43 - Antoni Kapral</h2>");
+        document.write("Liczby parzyste od 2 do " + koniec_kap + ":<br>");
+        
+        for(i_kap=2; i_kap<=koniec_kap; i_kap++) {
+            if(i_kap % 2 == 0) {
+                document.write(i_kap + "<br>");
+            }
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

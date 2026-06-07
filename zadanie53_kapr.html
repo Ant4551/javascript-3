@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 53 - Kapral</title>
+    <style>
+        body { font-family: monospace; font-size: 16px; }
+    </style>
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 53 - Rysowanie prostokąta z gwiazdek (4 pętle)
+        
+        var a_kap = prompt("Podaj wysokość (a):", "");
+        var b_kap = prompt("Podaj szerokość (b):", "");
+        a_kap = parseInt(a_kap);
+        b_kap = parseInt(b_kap);
+        
+        document.write("<h2>Zadanie 53 - Antoni Kapral</h2>");
+        document.write("a = " + a_kap + ", b = " + b_kap + "<br><br>");
+        
+        // Pierwsza pętla - górne poziome gwiazdki
+        for(var i_kap=1; i_kap<=b_kap; i_kap++) {
+            document.write("* ");
+        }
+        document.write("<br>");
+        
+        // Druga pętla - przygotowanie wiersza środkowego
+        if(a_kap > 2) {
+            var wiersz_kap = "*";
+            for(var i_kap=1; i_kap<=b_kap-2; i_kap++) {
+                wiersz_kap = wiersz_kap + "&nbsp;&nbsp;";
+            }
+            wiersz_kap = wiersz_kap + "*";
+            
+            // Trzecia pętla - wyświetlenie przygotowanego wiersza
+            for(var i_kap=1; i_kap<=a_kap-2; i_kap++) {
+                document.write(wiersz_kap + "<br>");
+            }
+        }
+        
+        // Czwarta pętla - dolne poziome gwiazdki
+        if(a_kap > 1) {
+            for(var i_kap=1; i_kap<=b_kap; i_kap++) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 46 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 46</h2>
+    <textarea cols="90" rows="25">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 46 - Kapral&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 46 - Sprawdzanie danych trójkąta (wysokość i podstawa)
+
+var h_kap, a_kap;
+
+// Pętla dla wysokości
+do {
+    var liczba1_kap = prompt("Wysokość =", "");
+    h_kap = parseFloat(liczba1_kap);
+    if(h_kap &lt;= 0) {
+        document.write("&lt;p style='color:red;'&gt;Wysokość musi być większa od zera! Podaj ponownie.&lt;/p&gt;");
+    }
+} while (h_kap &lt;= 0);
+
+// Pętla dla podstawy
+do {
+    var liczba2_kap = prompt("Podstawę =", "");
+    a_kap = parseFloat(liczba2_kap);
+    if(a_kap &lt;= 0) {
+        document.write("&lt;p style='color:red;'&gt;Podstawa musi być większa od zera! Podaj ponownie.&lt;/p&gt;");
+    }
+} while(!(a_kap &gt; 0));
+
+var Pole_kap = a_kap * h_kap / 2;
+
+document.write("&lt;div style='color:red;font-size:50px;'&gt;");
+document.write("&lt;h2&gt;Zadanie 46 - Antoni Kapral&lt;/h2&gt;");
+document.write("&lt;p&gt;Wysokość: " + h_kap + "&lt;/p&gt;");
+document.write("&lt;p&gt;Podstawa: " + a_kap + "&lt;/p&gt;");
+document.write("&lt;p&gt;Pole = " + Pole_kap.toFixed(2) + " cm²&lt;/p&gt;");
+document.write("&lt;/div&gt;");
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

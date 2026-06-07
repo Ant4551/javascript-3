@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 55 - Kapral</title>
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 55 - Zmiana wielkości tekstu
+        
+        var l1_t_kap, l2_t_kap;
+        
+        // Sprawdzanie pierwszej liczby
+        do {
+            l1_t_kap = prompt("Podaj pierwszą liczbę z przedziału <20,60>:", "");
+            l1_t_kap = parseFloat(l1_t_kap);
+            if(l1_t_kap < 20 || l1_t_kap > 60) {
+                document.write("<p style='color:red;'>liczba " + l1_t_kap + " nie należy do przedziału <20,60></p>");
+            }
+        } while(l1_t_kap < 20 || l1_t_kap > 60);
+        
+        // Sprawdzanie drugiej liczby
+        do {
+            l2_t_kap = prompt("Podaj drugą liczbę z przedziału <20,60>:", "");
+            l2_t_kap = parseFloat(l2_t_kap);
+            if(l2_t_kap < 20 || l2_t_kap > 60) {
+                document.write("<p style='color:red;'>liczba " + l2_t_kap + " nie należy do przedziału <20,60></p>");
+            }
+        } while(l2_t_kap < 20 || l2_t_kap > 60);
+        
+        var pocz_kap = prompt("Podaj początkową wielkość tekstu (px):", "");
+        var tekst_kap = prompt("Podaj dowolny tekst:", "");
+        
+        pocz_kap = parseInt(pocz_kap);
+        
+        document.write("<h2>Zadanie 55 - Antoni Kapral</h2>");
+        document.write("Liczba 1: " + l1_t_kap + ", Liczba 2: " + l2_t_kap + "<br>");
+        document.write("Wielkość początkowa: " + pocz_kap + "px<br>");
+        document.write("Tekst: " + tekst_kap + "<br><br>");
+        
+        if(l1_t_kap < l2_t_kap) {
+            // Zwiększanie tekstu
+            for(var i_kap=pocz_kap; i_kap<=100; i_kap+=5) {
+                document.write("<p style='font-size:" + i_kap + "px; color:black;'>" + tekst_kap + "</p>");
+            }
+        } else if(l2_t_kap < l1_t_kap) {
+            // Zmniejszanie tekstu
+            for(var i_kap=pocz_kap; i_kap>=0; i_kap-=5) {
+                document.write("<p style='font-size:" + i_kap + "px; color:black;'>" + tekst_kap + "</p>");
+            }
+        } else {
+            // Raz
+            document.write("<p style='font-size:" + pocz_kap + "px; color:black;'>" + tekst_kap + "</p>");
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

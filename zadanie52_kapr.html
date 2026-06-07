@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 52 - Kapral</title>
+    <style>
+        body { font-family: monospace; font-size: 16px; }
+    </style>
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 52 - Rysowanie prostokąta z gwiazdek (3 pętle)
+        
+        var liczba_liter_nazwiska = 6; // KAPRAL = 6 liter
+        var liczba_liter_imienia = 6; // ANTONI = 6 liter
+        
+        var a_kap = (liczba_liter_nazwiska % 4) + 5;
+        var b_kap = (liczba_liter_imienia % 6) + 20;
+        
+        document.write("<h2>Zadanie 52 - Antoni Kapral</h2>");
+        document.write("a = " + a_kap + ", b = " + b_kap + "<br><br>");
+        
+        // Pierwsza pętla - górne poziome gwiazdki
+        for(var i_kap=1; i_kap<=b_kap; i_kap++) {
+            document.write("* ");
+        }
+        document.write("<br>");
+        
+        // Druga pętla - środkowe gwiazdki (pionowe)
+        for(var i_kap=1; i_kap<=a_kap-2; i_kap++) {
+            document.write("*");
+            for(var j_kap=1; j_kap<=b_kap*2-3; j_kap++) {
+                document.write("&nbsp;");
+            }
+            document.write("*<br>");
+        }
+        
+        // Trzecia pętla - dolne poziome gwiazdki
+        if(a_kap > 1) {
+            for(var i_kap=1; i_kap<=b_kap; i_kap++) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 59 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 59</h2>
+    <textarea cols="90" rows="35">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Zadanie 59 - Kapral&lt;/title&gt;
+    &lt;style&gt;
+        body { font-family: monospace; }
+    &lt;/style&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 59 - Punkty kratowe w kole
+
+var numer_dziennika = 10;
+
+document.write("&lt;div style='color:red; font-size:2cm;'&gt;");
+document.write("Antoni Kapral&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+document.write("&lt;div style='color:blue; font-size:5mm;'&gt;");
+document.write("Zadanie 59 - Punkty kratowe w kole&lt;br&gt;&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+function obliczN_kap(R_kap) {
+    var licznik_kap = 0;
+    var R_calkowite_kap = Math.ceil(R_kap);
+    
+    for(i_kap = -R_calkowite_kap; i_kap &lt;= R_calkowite_kap; i_kap++) {
+        for(j_kap = -R_calkowite_kap; j_kap &lt;= R_calkowite_kap; j_kap++) {
+            if(Math.sqrt(i_kap*i_kap + j_kap*j_kap) &lt;= R_kap) {
+                licznik_kap++;
+            }
+        }
+    }
+    return licznik_kap;
+}
+
+// Tabela wyników
+document.write("&lt;table border='1' cellpadding='8'&gt;");
+document.write("&lt;tr style='background-color:#ddd;'&gt;&lt;th&gt;Promień koła R&lt;/th&gt;&lt;th&gt;Liczba punktów kratowych N(R)&lt;/th&gt;&lt;/tr&gt;");
+
+var promienie_kap = [2.01, 4.50, 100 + numer_dziennika, 1000 + numer_dziennika];
+
+for(var p_kap=0; p_kap&lt;promienie_kap.length; p_kap++) {
+    var wynik_kap = obliczN_kap(promienie_kap[p_kap]);
+    document.write("&lt;tr&gt;&lt;td&gt;" + promienie_kap[p_kap] + "&lt;/td&gt;&lt;td&gt;" + wynik_kap + "&lt;/td&gt;&lt;/tr&gt;");
+}
+
+document.write("&lt;/table&gt;");
+
+document.write("&lt;br&gt;&lt;br&gt;&lt;b&gt;Przykłady:&lt;/b&gt;&lt;br&gt;");
+document.write("Dla R=0, N(R)=1&lt;br&gt;");
+document.write("Dla R=1, N(R)=5&lt;br&gt;");
+document.write("Dla R=1.5, N(R)=9&lt;br&gt;");
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

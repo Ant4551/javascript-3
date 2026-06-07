@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 45 - Kapral</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 45 - Sprawdzanie parzystości wczytanej liczby
+        
+        var liczba_liter_nazwiska = 6;
+        var ile_razy_kap = (liczba_liter_nazwiska % 4) + 10;
+        var wielkosc_liter_kap = (liczba_liter_nazwiska % 3) + 40;
+        
+        var wczytana_kap = prompt("Podaj liczbę:", "");
+        var liczba_kap = parseFloat(wczytana_kap);
+        
+        document.write("<h2>Zadanie 45 - Antoni Kapral</h2>");
+        document.write("Wczytana liczba: " + liczba_kap + "<br>");
+        document.write("Ilość wykonania pętli = " + ile_razy_kap + "<br>");
+        document.write("Wielkość liter = " + wielkosc_liter_kap + "px<br><br>");
+        
+        if(liczba_kap % 2 == 0) {
+            document.write("<span style='color:blue; font-size:" + wielkosc_liter_kap + "px;'>");
+            for(i_kap=1; i_kap<=ile_razy_kap; i_kap++) {
+                document.write(i_kap + ". Kapral<br>");
+            }
+            document.write("</span>");
+        } else {
+            document.write("<span style='color:green; font-size:" + wielkosc_liter_kap + "px;'>");
+            for(i_kap=1; i_kap<=ile_razy_kap; i_kap++) {
+                document.write(i_kap + ". Antoni<br>");
+            }
+            document.write("</span>");
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

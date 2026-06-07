@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 51 - Kapral</title>
+    <style>
+        body { font-family: monospace; }
+    </style>
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 51 - Modyfikacja zadania 50
+        
+        var ile_razy_kap = prompt("Ile razy powtórzyć:", "");
+        var inicjaly_kap = prompt("Podaj swoje inicjały:", "");
+        
+        document.write("<h2>Zadanie 51 - Antoni Kapral</h2>");
+        document.write("Ilość powtórzeń: " + ile_razy_kap + "<br>");
+        document.write("Inicjały: " + inicjaly_kap + "<br><br>");
+        
+        for (var i_kap=1; i_kap<=parseInt(ile_razy_kap); i_kap++) {
+            for (var k_kap=1; k_kap<=i_kap; k_kap++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            document.write(i_kap + "_" + inicjaly_kap + "_" + i_kap + "<br>");
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

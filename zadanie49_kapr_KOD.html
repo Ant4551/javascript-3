@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 49 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 49</h2>
+    <textarea cols="90" rows="20">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 49 - Kapral&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 49 - Obliczanie silni
+
+var n_kap = prompt("Podaj liczbę n =", "");
+n_kap = parseInt(n_kap);
+var silnia_kap = 1;
+
+if(n_kap == 0) {
+    silnia_kap = 1;
+} else {
+    for(i_kap=1; i_kap&lt;=n_kap; i_kap++) {
+        silnia_kap = silnia_kap * i_kap;
+    }
+}
+
+document.write("&lt;div style='color:purple; font-size:24px;'&gt;");
+document.write("&lt;h2&gt;Zadanie 49 - Antoni Kapral&lt;/h2&gt;");
+document.write("&lt;p&gt;n = " + n_kap + "&lt;/p&gt;");
+document.write("&lt;p&gt;" + n_kap + "! = " + silnia_kap + "&lt;/p&gt;");
+document.write("&lt;/div&gt;");
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

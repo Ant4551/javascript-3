@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 50 - Kapral</title>
+    <style>
+        body { font-family: monospace; }
+    </style>
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 50 - Liczby przesunięte o spacię w prawo
+        
+        document.write("<h2>Zadanie 50 - Antoni Kapral</h2>");
+        
+        for (var i_kap=1; i_kap<=10; i_kap++) {
+            for (var k_kap=1; k_kap<=i_kap; k_kap++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            document.write(i_kap + "<br>");
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

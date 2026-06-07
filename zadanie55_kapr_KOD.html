@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 55 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 55</h2>
+    <textarea cols="90" rows="40">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Zadanie 55 - Kapral&lt;/title&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 55 - Zmiana wielkości tekstu
+
+var l1_t_kap, l2_t_kap;
+
+// Sprawdzanie pierwszej liczby
+do {
+    l1_t_kap = prompt("Podaj pierwszą liczbę z przedziału &lt;20,60&gt;:", "");
+    l1_t_kap = parseFloat(l1_t_kap);
+    if(l1_t_kap &lt; 20 || l1_t_kap &gt; 60) {
+        document.write("&lt;p style='color:red;'&gt;liczba " + l1_t_kap + " nie należy do przedziału &lt;20,60&gt;&lt;/p&gt;");
+    }
+} while(l1_t_kap &lt; 20 || l1_t_kap &gt; 60);
+
+// Sprawdzanie drugiej liczby
+do {
+    l2_t_kap = prompt("Podaj drugą liczbę z przedziału &lt;20,60&gt;:", "");
+    l2_t_kap = parseFloat(l2_t_kap);
+    if(l2_t_kap &lt; 20 || l2_t_kap &gt; 60) {
+        document.write("&lt;p style='color:red;'&gt;liczba " + l2_t_kap + " nie należy do przedziału &lt;20,60&gt;&lt;/p&gt;");
+    }
+} while(l2_t_kap &lt; 20 || l2_t_kap &gt; 60);
+
+var pocz_kap = prompt("Podaj początkową wielkość tekstu (px):", "");
+var tekst_kap = prompt("Podaj dowolny tekst:", "");
+
+pocz_kap = parseInt(pocz_kap);
+
+document.write("&lt;div style='color:red; font-size:2cm;'&gt;");
+document.write("Antoni Kapral&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+document.write("&lt;div style='color:blue; font-size:5mm;'&gt;");
+document.write("Zadanie 55 - Zmiana wielkości tekstu&lt;br&gt;");
+document.write("Liczba 1: " + l1_t_kap + ", Liczba 2: " + l2_t_kap + "&lt;br&gt;");
+document.write("Wielkość początkowa: " + pocz_kap + "px&lt;br&gt;");
+document.write("Tekst: " + tekst_kap + "&lt;br&gt;&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+if(l1_t_kap &lt; l2_t_kap) {
+    for(var i_kap=pocz_kap; i_kap&lt;=100; i_kap+=5) {
+        document.write("&lt;p style='font-size:" + i_kap + "px; color:black;'&gt;" + tekst_kap + " (wielkość: " + i_kap + "px)&lt;/p&gt;");
+    }
+} else if(l2_t_kap &lt; l1_t_kap) {
+    for(var i_kap=pocz_kap; i_kap&gt;=0; i_kap-=5) {
+        document.write("&lt;p style='font-size:" + i_kap + "px; color:black;'&gt;" + tekst_kap + " (wielkość: " + i_kap + "px)&lt;/p&gt;");
+    }
+} else {
+    document.write("&lt;p style='font-size:" + pocz_kap + "px; color:black;'&gt;" + tekst_kap + "&lt;/p&gt;");
+}
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

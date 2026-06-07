@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 58 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 58</h2>
+    <textarea cols="90" rows="25">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Zadanie 58 - Kapral&lt;/title&gt;
+    &lt;style&gt;
+        body { font-family: monospace; font-size: 16px; }
+    &lt;/style&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 58 - Liczby podzielne przez 3, 5 i 7
+
+document.write("&lt;div style='color:red; font-size:2cm;'&gt;");
+document.write("Antoni Kapral&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+document.write("&lt;div style='color:blue; font-size:5mm;'&gt;");
+document.write("Zadanie 58 - Liczby podzielne przez 3, 5 i 7&lt;br&gt;&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+document.write("i=1&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;for (i=1; i&lt;=100; i++)&lt;br&gt;");
+document.write("&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;if (i%3==0 &amp;&amp; i%5==0 &amp;&amp; i%7==0)&lt;br&gt;");
+document.write("&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;print(i)&lt;br&gt;&lt;br&gt;");
+
+document.write("&lt;b&gt;Wyniki:&lt;/b&gt;&lt;br&gt;");
+
+for(i_kap=1; i_kap&lt;=100; i_kap++) {
+    if(i_kap % 3 == 0 &amp;&amp; i_kap % 5 == 0 &amp;&amp; i_kap % 7 == 0) {
+        document.write(i_kap + "&lt;br&gt;");
+    }
+}
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

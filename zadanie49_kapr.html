@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 49 - Kapral</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 49 - Obliczanie silni
+        
+        var n_kap = prompt("Podaj liczbę n =", "");
+        n_kap = parseInt(n_kap);
+        var silnia_kap = 1;
+        
+        if(n_kap == 0) {
+            silnia_kap = 1;
+        } else {
+            for(i_kap=1; i_kap<=n_kap; i_kap++) {
+                silnia_kap = silnia_kap * i_kap;
+            }
+        }
+        
+        document.write("<h2>Zadanie 49 - Antoni Kapral</h2>");
+        document.write("n = " + n_kap + "<br>");
+        document.write(n_kap + "! = " + silnia_kap + "<br>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

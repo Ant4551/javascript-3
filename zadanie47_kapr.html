@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 47 - Kapral</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 47 - Sprawdzanie czy boki tworzą trójkąt
+        
+        var a_kap, b_kap, c_kap;
+        var poprawny_kap = false;
+        var komunikaty_kap = "";
+        
+        do {
+            var bok1_kap = prompt("Podaj bok a:", "");
+            var bok2_kap = prompt("Podaj bok b:", "");
+            var bok3_kap = prompt("Podaj bok c:", "");
+            
+            a_kap = parseFloat(bok1_kap);
+            b_kap = parseFloat(bok2_kap);
+            c_kap = parseFloat(bok3_kap);
+            
+            if(a_kap > 0 && b_kap > 0 && c_kap > 0 && 
+               a_kap + b_kap > c_kap && 
+               a_kap + c_kap > b_kap && 
+               b_kap + c_kap > a_kap) {
+                poprawny_kap = true;
+                komunikaty_kap += "Boki tworzą trójkąt!<br>";
+            } else {
+                komunikaty_kap += "Boki NIE tworzą trójkąta! Podaj ponownie.<br>";
+            }
+        } while(!poprawny_kap);
+        
+        document.write("<h2>Zadanie 47 - Antoni Kapral</h2>");
+        document.write("<p style='color:green;'>" + komunikaty_kap + "</p>");
+        document.write("Bok a = " + a_kap + "<br>");
+        document.write("Bok b = " + b_kap + "<br>");
+        document.write("Bok c = " + c_kap + "<br>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

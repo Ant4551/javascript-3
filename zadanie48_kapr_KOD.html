@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 48 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 48</h2>
+    <textarea cols="90" rows="20">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 48 - Kapral&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 48 - Suma szeregu harmonicznego od 1 do 1 000 000
+
+var suma_kap = 0;
+
+for(i_kap=1; i_kap&lt;=1000000; i_kap++) {
+    suma_kap = suma_kap + 1/i_kap;
+}
+
+document.write("&lt;div style='color:darkgreen; font-size:24px;'&gt;");
+document.write("&lt;h2&gt;Zadanie 48 - Antoni Kapral&lt;/h2&gt;");
+document.write("&lt;h3&gt;Suma szeregu harmonicznego od 1 do 1 000 000&lt;/h3&gt;");
+document.write("&lt;p&gt;Suma = " + suma_kap.toFixed(10) + "&lt;/p&gt;");
+document.write("&lt;p&gt;Wzór: S = 1/1 + 1/2 + 1/3 + ... + 1/1000000&lt;/p&gt;");
+document.write("&lt;/div&gt;");
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

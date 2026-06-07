@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 59 - Kapral</title>
+    <style>
+        body { font-family: monospace; }
+        table { border-collapse: collapse; margin-top: 10px; }
+        td, th { border: 1px solid black; padding: 5px 10px; }
+        th { background-color: #ddd; }
+    </style>
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 59 - Punkty kratowe w kole
+        
+        var numer_dziennika = 10;
+        
+        document.write("<h2>Zadanie 59 - Antoni Kapral</h2>");
+        
+        function obliczN_kap(R_kap) {
+            var licznik_kap = 0;
+            var R_calkowite_kap = Math.ceil(R_kap);
+            
+            for(i_kap = -R_calkowite_kap; i_kap <= R_calkowite_kap; i_kap++) {
+                for(j_kap = -R_calkowite_kap; j_kap <= R_calkowite_kap; j_kap++) {
+                    if(Math.sqrt(i_kap*i_kap + j_kap*j_kap) <= R_kap) {
+                        licznik_kap++;
+                    }
+                }
+            }
+            return licznik_kap;
+        }
+        
+        // Tabela wyników
+        document.write("<table>");
+        document.write("<tr><th>Promień koła R</th><th>Liczba punktów kratowych N(R)</th></tr>");
+        
+        var promienie_kap = [2.01, 4.50, 100 + numer_dziennika, 1000 + numer_dziennika];
+        
+        for(var p_kap=0; p_kap<promienie_kap.length; p_kap++) {
+            var wynik_kap = obliczN_kap(promienie_kap[p_kap]);
+            document.write("<tr><td>" + promienie_kap[p_kap] + "</td><td>" + wynik_kap + "</td></tr>");
+        }
+        
+        document.write("</table>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

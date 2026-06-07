@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 53 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 53</h2>
+    <textarea cols="90" rows="35">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Zadanie 53 - Kapral&lt;/title&gt;
+    &lt;style&gt;
+        body { font-family: monospace; font-size: 16px; }
+    &lt;/style&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 53 - Rysowanie prostokąta z gwiazdek (4 pętle)
+
+var a_kap = prompt("Podaj wysokość (a):", "");
+var b_kap = prompt("Podaj szerokość (b):", "");
+a_kap = parseInt(a_kap);
+b_kap = parseInt(b_kap);
+
+document.write("&lt;div style='color:red; font-size:2cm;'&gt;");
+document.write("Antoni Kapral&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+document.write("&lt;div style='color:blue; font-size:5mm;'&gt;");
+document.write("Zadanie 53 - Rysowanie prostokąta (4 pętle)&lt;br&gt;");
+document.write("a = " + a_kap + ", b = " + b_kap + "&lt;br&gt;&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+// Pierwsza pętla - górne poziome gwiazdki
+for(var i_kap=1; i_kap&lt;=b_kap; i_kap++) {
+    document.write("* ");
+}
+document.write("&lt;br&gt;");
+
+// Druga pętla - przygotowanie wiersza środkowego
+if(a_kap &gt; 2) {
+    var wiersz_kap = "*";
+    for(var i_kap=1; i_kap&lt;=b_kap-2; i_kap++) {
+        wiersz_kap = wiersz_kap + "&amp;nbsp;&amp;nbsp;";
+    }
+    wiersz_kap = wiersz_kap + "*";
+    
+    // Trzecia pętla - wyświetlenie przygotowanego wiersza
+    for(var i_kap=1; i_kap&lt;=a_kap-2; i_kap++) {
+        document.write(wiersz_kap + "&lt;br&gt;");
+    }
+}
+
+// Czwarta pętla - dolne poziome gwiazdki
+if(a_kap &gt; 1) {
+    for(var i_kap=1; i_kap&lt;=b_kap; i_kap++) {
+        document.write("* ");
+    }
+    document.write("&lt;br&gt;");
+}
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

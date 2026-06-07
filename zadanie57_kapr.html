@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 57 - Kapral</title>
+    <style>
+        body { font-family: monospace; }
+    </style>
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 57 - Liczby, pierwiastki drugie i czwartego stopnia
+        
+        var numer_dziennika = 10;
+        var start_kap = numer_dziennika;
+        var koniec_kap = numer_dziennika + 15;
+        
+        document.write("<h2>Zadanie 57 - Antoni Kapral</h2>");
+        document.write("Zakres: od " + start_kap + " do " + koniec_kap + "<br><br>");
+        
+        for(i_kap=start_kap; i_kap<=koniec_kap; i_kap++) {
+            var pierw2_kap = Math.sqrt(i_kap);
+            var pierw4_kap = Math.sqrt(Math.sqrt(i_kap));
+            
+            document.write("i=" + i_kap + "&nbsp;&nbsp;&nbsp;&nbsp;pierw_2(" + i_kap + ")=" + pierw2_kap.toFixed(2) + 
+                          "&nbsp;&nbsp;&nbsp;&nbsp;pierw_4(" + i_kap + ")=" + pierw4_kap.toFixed(2) + "<br>");
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

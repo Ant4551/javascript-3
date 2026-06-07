@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 58 - Kapral</title>
+    <style>
+        body { font-family: monospace; font-size: 16px; }
+    </style>
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 58 - Liczby podzielne przez 3, 5 i 7
+        
+        document.write("<h2>Zadanie 58 - Antoni Kapral</h2>");
+        document.write("Liczby od 1 do 100 podzielne przez 3, 5 i 7:<br><br>");
+        
+        for(i_kap=1; i_kap<=100; i_kap++) {
+            if(i_kap % 3 == 0 && i_kap % 5 == 0 && i_kap % 7 == 0) {
+                document.write(i_kap + "<br>");
+            }
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

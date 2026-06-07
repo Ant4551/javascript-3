@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 57 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 57</h2>
+    <textarea cols="90" rows="25">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Zadanie 57 - Kapral&lt;/title&gt;
+    &lt;style&gt;
+        body { font-family: monospace; }
+    &lt;/style&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 57 - Liczby, pierwiastki drugie i czwartego stopnia
+
+var numer_dziennika = 10;
+var start_kap = numer_dziennika;
+var koniec_kap = numer_dziennika + 15;
+
+document.write("&lt;div style='color:red; font-size:2cm;'&gt;");
+document.write("Antoni Kapral&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+document.write("&lt;div style='color:blue; font-size:5mm;'&gt;");
+document.write("Zadanie 57 - Pierwiastki drugie i czwartego stopnia&lt;br&gt;");
+document.write("Zakres: od " + start_kap + " do " + koniec_kap + "&lt;br&gt;&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+var licznik_kap = 0;
+
+for(i_kap=start_kap; i_kap&lt;=koniec_kap; i_kap++) {
+    var pierw2_kap = Math.sqrt(i_kap);
+    var pierw4_kap = Math.sqrt(Math.sqrt(i_kap));
+    
+    document.write("i=" + i_kap + "&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;pierw_2(" + i_kap + ")=" + pierw2_kap.toFixed(2) + 
+                  "&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;pierw_4(" + i_kap + ")=" + pierw4_kap.toFixed(2) + "&lt;br&gt;");
+    licznik_kap++;
+    
+    if(licznik_kap % 3 == 0 &amp;&amp; i_kap &lt; koniec_kap) {
+        document.write("&lt;hr&gt;");
+    }
+}
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

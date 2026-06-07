@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Kod Zadania 56 - Kapral</title>
+    <script language="JavaScript">
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Kod programu - Zadanie 56</h2>
+    <textarea cols="90" rows="25">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Zadanie 56 - Kapral&lt;/title&gt;
+    &lt;style&gt;
+        body { font-family: monospace; }
+    &lt;/style&gt;
+    &lt;script language="JavaScript"&gt;
+// Antoni Kapral 3F - 2.8.2025
+// Zadanie 56 - Liczby pierwsze ze wzoru W(i)=i^2+i+41
+
+document.write("&lt;div style='color:red; font-size:2cm;'&gt;");
+document.write("Antoni Kapral&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+document.write("&lt;div style='color:blue; font-size:5mm;'&gt;");
+document.write("Zadanie 56 - Liczby pierwsze ze wzoru i² + i + 41&lt;br&gt;&lt;br&gt;");
+document.write("&lt;/div&gt;");
+
+var licznik_kap = 0;
+
+for(i_kap=0; i_kap&lt;=39; i_kap++) {
+    var wynik_kap = i_kap * i_kap + i_kap + 41;
+    document.write("i=" + i_kap + "&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;W(" + i_kap + ")=" + wynik_kap + "&lt;br&gt;");
+    licznik_kap++;
+    
+    if(licznik_kap % 5 == 0 &amp;&amp; i_kap &lt; 39) {
+        document.write("&lt;hr&gt;");
+    }
+}
+
+function okno_zamknij_kapral() {
+    window.close();
+}
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

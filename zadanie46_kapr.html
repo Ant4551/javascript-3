@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 46 - Kapral</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 46 - Sprawdzanie danych trójkąta (wysokość i podstawa)
+        
+        var h_kap, a_kap;
+        var komunikaty_kap = "";
+        
+        do {
+            var liczba1_kap = prompt("Wysokość =", "");
+            h_kap = parseFloat(liczba1_kap);
+            if(h_kap <= 0) {
+                komunikaty_kap += "Wysokość musi być większa od zera!<br>";
+            }
+        } while (h_kap <= 0);
+        
+        do {
+            var liczba2_kap = prompt("Podstawę =", "");
+            a_kap = parseFloat(liczba2_kap);
+            if(a_kap <= 0) {
+                komunikaty_kap += "Podstawa musi być większa od zera!<br>";
+            }
+        } while(!(a_kap > 0));
+        
+        var Pole_kap = a_kap * h_kap / 2;
+        
+        document.write("<h2>Zadanie 46 - Antoni Kapral</h2>");
+        if(komunikaty_kap) {
+            document.write("<p style='color:red;'>" + komunikaty_kap + "</p>");
+        }
+        document.write("Wysokość: " + h_kap + "<br>");
+        document.write("Podstawa: " + a_kap + "<br>");
+        document.write("Pole = " + Pole_kap.toFixed(2) + " cm²<br>");
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>

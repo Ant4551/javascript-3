@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Zadanie 44 - Kapral</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="JavaScript">
+        // Antoni Kapral 3F - 2.8.2025
+        // Zadanie 44 - Nazwisko lub imię na przemian
+        
+        var liczba_liter_nazwiska = 6;
+        var ile_razy_kap = (liczba_liter_nazwiska % 4) + 10;
+        var wielkosc_liter_kap = (liczba_liter_nazwiska % 3) + 40;
+        
+        document.write("<h2>Zadanie 44 - Antoni Kapral</h2>");
+        document.write("Ilość wykonania pętli = " + ile_razy_kap + "<br>");
+        document.write("Wielkość liter = " + wielkosc_liter_kap + "px<br><br>");
+        
+        for(i_kap=1; i_kap<=ile_razy_kap; i_kap++) {
+            if(i_kap % 2 == 1) {
+                document.write("<span style='color:blue; font-size:" + wielkosc_liter_kap + "px;'>" + i_kap + ". Kapral</span><br>");
+            } else {
+                document.write("<span style='color:green; font-size:" + wielkosc_liter_kap + "px;'>" + i_kap + ". Antoni</span><br>");
+            }
+        }
+        
+        function okno_zamknij_kapral() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kapral()"/>
+</body>
+</html>
